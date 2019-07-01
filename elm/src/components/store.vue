@@ -12,7 +12,8 @@
           <p>公告：{{Detil.promotion_info}}</p>
         </div>
         <img src="./imgs/back.png" alt id="img1" @click="ret()">
-        <img src="./imgs/1.png" alt id="img2">
+        <!-- <img src="./imgs/1.png" alt id="img2"> -->
+        <router-link :to="'/storedetail?id='+Detil.id"><img src="./imgs/1.png" alt="" id="img2"></router-link>
       </div>
       <!-- v-if ="Detil.activities.name !=''" -->
       <div id="huodong" v-if="Detil.activities.length > 0">
