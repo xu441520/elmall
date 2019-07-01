@@ -225,7 +225,7 @@ left: 1.4rem;
 }
 .block {
 height: 0.5rem;
-border: 0.01rem solid black;
+/* border: 0.01rem solid black; */
 text-align: center;
 }
 
@@ -238,7 +238,7 @@ border-radius: 0%;
 height: 0.32rem;
 margin-top: 0.07rem;
 text-align: center;
-border: 0.01rem solid grey;
+border-right: 0.01rem solid rgb(197, 195, 195);
 background-color: rgba(0, 0, 0, 0);
 color: black;
 }
@@ -401,6 +401,7 @@ font-size: 0.12rem;
 color: white;
 background-color: blue;
 border-radius: 0.03rem;
+border-radius: 0.05rem;
 /* width: 0.5rem;
 height: 0.18rem; */
 }
@@ -415,6 +416,7 @@ font-size: 0.12rem;
 width: 0.47rem;
 text-align: center;
 color: blue;
+border-radius: 0.05rem;
 }
 #star_two {
 /* border: 0.01rem solid black; */
@@ -516,7 +518,7 @@ margin-top: 0.08rem;
 margin-right: 0.1rem;
 background-color: rgb(245, 245, 245);
 border:none;
-border: 0.01rem solid rgb(92, 92, 92);
+/* border-right: 0.01rem solid rgb(121, 120, 120); */
 color: lightgrey;
 font-size: 0.15rem;
 }
