@@ -1,7 +1,7 @@
 // 外卖店铺页
 <template>
   <div id="store">
-    <div id="store_head">
+    <div id="store_head"> 
       <div id="store_head_one">
         <p>
           <img :src="'https://elm.cangdu.org/img/'+Detil.image_path" alt>
