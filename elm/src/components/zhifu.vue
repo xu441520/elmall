@@ -62,7 +62,7 @@ export default {
     methods: {
         goBack(){
             // this.$router.go(-1);
-            if (this.hongshow !=true) {
+            if (this.hongshow !=true && this.fushow !=true) {
                 this.$router.go(-1);
             }
         },

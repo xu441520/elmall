@@ -10,7 +10,7 @@
             <p v-show="btnshow" class="xiu_text">用户名只能修改一次（5-25字符之间）</p>
             <p :style="{color:color1}" v-show="btnname" class="xiu_text">用户名只能修改一次（5-24字符之间）</p>
             <router-link to="/account">
-                <button :style="{opcity:xiugai}" id="makesure" @click="change()">确认修改</button>
+                <button :style="{Opacity:xiugai}" id="makesure" @click="change()">确认修改</button>
             </router-link>
         </div>
     </div>
@@ -41,15 +41,18 @@ export default {
             });
         },
         xiuname(){
-            if(this.usenameing.length<=5&&this.usenameing.length>25){
+            if(this.usenameing.length >= 5&&this.usenameing.length < 25){
                 this.btnname=true;
                 this.btnshow=false;
-                this.btnColor="1px solid red";
-                this.color1="red";
-            }else{
-                this.btnshow=true;
-                this.btnname=false;
+                this.btnColor="";
+                this.color1="";
                 this.xiugai="1";
+            }else{
+                this.btnshow=false;
+                this.btnname=true;
+                this.xiugai="0.3";
+                this.color1="red"
+                this.btnColor="1px solid red";
             }
         }
         
@@ -126,7 +129,7 @@ export default {
     height: 0.45rem;
     background-color:rgb(49, 144, 232);
     color: #fff;
-    opacity: 0.6;
+    opacity: 0.3;
     margin-top: 0.3rem; 
     margin-left: 0.13rem;
     font-size: 0.19rem;

@@ -20,7 +20,7 @@
         <div id="account_two">
             <span>用户名</span>
             <!-- <span>{{$store.state.inputName.username}}</span> -->
-            <span>{{$store.state.inputName.username}}</span>
+            <span v-text="this.$store.state.inputName.username">{{$store.state.inputName.username}}</span>
             <router-link to="/xiugai">
                 <img id="two_img" src="../../src/components/imgs/youj.png" alt="">
             </router-link>
@@ -88,7 +88,9 @@ export default {
     },
     methods: {
         goBack(){
-            this.$router.go(-1);
+            this.$router.push({
+                name: "user",
+            });
         },
         makesure(){
             this.hongshow =false;

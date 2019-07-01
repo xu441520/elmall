@@ -73,10 +73,11 @@ export default {
     padding-top: 0.2rem;
 }
 #money_five{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 0.1rem;
     margin-right: 0.1rem;
     background-color: #fff;
+    border-radius: 5px;
 }
 #money_two span:nth-child(1){
     /* border: 1px solid red; */
