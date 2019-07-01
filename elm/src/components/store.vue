@@ -8,7 +8,7 @@
         </p>
         <div id="store_head_one_two">
           <p>{{Detil.name}}</p>
-          <p>商家配送/分钟送达/配送费￥5</p>
+          <p>商家配送/分钟i送达/{{Detil.piecewise_agent_fee.tips}}</p>
           <p>公告：{{Detil.promotion_info}}</p>
         </div>
         <img src="./imgs/back.png" alt id="img1" @click="ret()" />
@@ -22,7 +22,7 @@
         <span id="huodong_sp1">{{Detil.activities[0].icon_name}}</span>
         <span id="huodong_sp2">{{Detil.activities[0].description}}(APP专享)</span>
         <router-link :to="'/huodong?id='+Detil.id">
-          <span id="huodong_sp3">1个活动</span>
+          <span id="huodong_sp3">{{Detil.activities.length}}个活动</span>
           <img src="./imgs/1.png" id="huodong_img" />
         </router-link>
       </div>
