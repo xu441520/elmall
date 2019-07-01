@@ -151,6 +151,9 @@ export default {
   margin-top: 1.2rem;
   position: relative;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 #sp_le {
   /* border: 0.01rem solid black; */
   width: 0.8rem;
