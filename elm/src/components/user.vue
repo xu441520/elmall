@@ -28,7 +28,7 @@
                 <div>我的余额</div>
             </div>
             <div id="user_sale" @click="youhui()">
-                <span @click="panhong()" v-show="hongshow">{{this.$store.state.honglength||0}}</span>
+                <span @click="panhong()" v-show="hongshow">{{this.$store.state.gift_amount||gifting}}</span>
                 <span>个</span>
                 <div>我的优惠</div>
             </div>
@@ -103,21 +103,27 @@ export default {
             nameshow:true,
             hongbaoing:[],//存储红包的长度
             hongshow:true,
+            gifting:0,
         }
     },
     created(){
         console.log("打印用户名");
         console.log(this.$route.query);
         console.log(this.$route.query.username);
-        this.accountName = this.$route.query.username;
         console.log(this.accountName);
         this.img = this.$store.state.userImages;
         this.usering();
-        this.couponing();
-        if (this.$store.state.inputName.username=="") {
-            this.$store.commit("honglength2",0);        
-        }
+        // this.couponing();
+        // if (this.$store.state.inputName.username=="") {
+        //     this.$store.commit("honglength2",0);        
+        // }
+        // if (this.nameing == "登录/注册") {
+            
+        // }
+        
+        console.log("打印红包的个数："+this.$store.state.gift_amount);
         this.usname = this.$store.state.inputName.username;
+
         
         
     },
@@ -170,19 +176,19 @@ export default {
         },
         // 登录切换用户名部分
         denglu(){
+            // this.$store.commit("giftamount",3);
             if(this.nameing=="登录/注册"){
+               this.$store.commit("giftamount",3);
                this.$router.push({
                name: "login",
             });
             }
-            this.chuxian2();
+            // this.chuxian2();
         },
 
         // 判定红包部分
         panhong(){
-            // if (this.$store.state.inputName.username=="") {
-            //     this.$store.commit("honglength2",0);        
-            // }
+            this.$store.commit("giftamount",3);
         },
         usering(){
             const api = "https://elm.cangdu.org/v1/user";
@@ -196,27 +202,28 @@ export default {
                 console.log(res);
                 this.gifts = res.data;
                 console.log(this.gifts.gift_amount);
+                
             })
         },
 
         // 红包链接
-        couponing(){
-            const api = "https://elm.cangdu.org/promotion/v2/users/1/hongbaos?limit=20&offset=0";
-            this.$http({
-                url:api,
-                method:'get',
-                withCredentials:true
+        // couponing(){
+        //     const api = "https://elm.cangdu.org/promotion/v2/users/1/hongbaos?limit=20&offset=0";
+        //     this.$http({
+        //         url:api,
+        //         method:'get',
+        //         withCredentials:true
 
-            }).then(res => {//请求返回的数据res
-                console.log("打印红包数据成功");
-                console.log(res);
-                // this.hongbaoing = res.data;
-                if(this.$store.state.inputName.username != ""){
-                this.$store.commit("honglength1",res.data.length)
-                // this.$store.commit("getdetail",res.data)
-               }
-            })
-        }
+        //     }).then(res => {//请求返回的数据res
+        //         console.log("打印红包数据成功");
+        //         console.log(res);
+        //         // this.hongbaoing = res.data;
+        //         if(this.$store.state.inputName.username != ""){
+        //         this.$store.commit("honglength1",res.data.length)
+        //         // this.$store.commit("getdetail",res.data)
+        //        }
+        //     })
+        // }
     }
 }
 </script>
@@ -552,7 +559,4 @@ margin-left: 0.23rem;
     top: 2.3rem;
     right: 0.2rem;
 }
-
-
-
 </style>
