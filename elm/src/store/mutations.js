@@ -100,5 +100,8 @@ export default {
   },
   honglength2(state,a){
       state.honglength=a;
-  }
+  },
+  giftamount(state,a){
+    state.gift_amount=a;
+    },
   }
