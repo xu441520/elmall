@@ -66,7 +66,7 @@ import Disclaimer from '@/components/disclaimer'
 import Coupon from '@/components/coupon'
 import Business from '@/components/business'
 import Yuer from '@/components/yuer'
-
+import Hongshuo from '@/components/Hongshuo'
 import Chaozan from '@/components/chaozan'
 import Niming from '@/components/niming'
 import Huodonging from '@/components/huodonging'
@@ -418,6 +418,11 @@ export default new Router({
       path: '/xiae',
       name: 'xiae',
       component: Xiae,
+    },
+    {
+      path: '/hongshuo',
+      name: 'hongshuo',
+      component: Hongshuo,
     },
   ]
 })

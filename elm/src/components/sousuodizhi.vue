@@ -6,7 +6,7 @@
         </div>
         <div id="souinp">
             <input v-model="keyword" type="text" placeholder="请输入小区/写字楼/学校等">
-            <input @click="getsousuo()" type="button" value="确认1">
+            <input @click="getsousuo()" type="button" value="确认">
         </div>
         <div id="advice">为了满足商家的送餐要求，建议你从列表中选择地址</div>
         <div id="sou_one">
@@ -82,7 +82,7 @@ export default {
 #common_head{
     width: 3.75rem;
     height: 0.5rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     position: fixed;
     top: 0rem;
     left: 0rem;
@@ -125,7 +125,7 @@ export default {
 #souinp input:nth-child(2){
     width: 23%;
     height: 0.4rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     display: inline-block;
     border-radius: 5px;
     color: #fff;

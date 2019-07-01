@@ -30,7 +30,7 @@
       </ul>
       <!-- <span>搜索历史</span> -->
       <ul>
-        <li :key="i" v-for="(v,i) in history">{{v}}</li>
+        <li @click="sousuoli()" :key="i" v-for="(v,i) in history">{{v}}</li>
       </ul>
     </div>
   </div>
@@ -57,6 +57,11 @@ export default {
     },
     loBack() {
       javascript: history.go(-1);
+    },
+    sousuoli(){
+      this.$router.push({
+        name: "home",
+      });
     },
     diZi() {
       const api =

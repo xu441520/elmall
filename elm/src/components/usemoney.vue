@@ -44,7 +44,7 @@ export default {
 #common_head{
     width: 3.75rem;
     height: 0.5rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     position: fixed;
     top: 0rem;
     left: 0rem;
@@ -67,7 +67,7 @@ export default {
 }
 #money_one{
     margin-top: 0.5rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     line-height: 0.28rem;
     padding-bottom: 0.15rem;
     padding-top: 0.2rem;
@@ -90,14 +90,14 @@ export default {
    position: absolute;
     top: 0.82rem;
     right: 0.95rem;
-    color: blue;
+    color: rgb(49, 144, 232);
 }
 #money_two span:nth-child(3){
     /* border: 1px solid red; */
     position: absolute;
     top: 0.78rem;
     right: 0.2rem;
-    color: blue;
+    color: rgb(49, 144, 232);
     
 }
 #money_three span:nth-child(1){

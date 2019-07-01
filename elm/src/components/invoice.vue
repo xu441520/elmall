@@ -24,7 +24,7 @@ export default {
 #common_head{
     width: 3.75rem;
     height: 0.5rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     position: fixed;
     top: 0rem;
     left: 0rem;

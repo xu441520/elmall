@@ -14,15 +14,14 @@
             <li :key="i" v-for="(v,i) in arr">{{v.address}}<br>{{v.phone}}
             <img v-show="wshow" @click="bianji(i)" id="quxiao" src="../../src/components/imgs/quxiao.png" alt="">
             </li>
-
         </ul>
         <div id="x_one">
-            <input id="xiu_inp" type="text" placeholder="新增地址">
+            
             <router-link to="/newadd">
+            <input id="xiu_inp" type="text" placeholder="新增地址">
                 <img id="ad_img" src="../../src/components/imgs/youj.png" alt="">
             </router-link>
         </div>
-        
     </div>
 </template>
 <script>
@@ -91,6 +90,7 @@ export default {
             console.log("打印删除地址成功ing");
             console.log(this.deleaddress);
             this.arr.splice(i,1);
+
         });
         }
     }
@@ -100,7 +100,7 @@ export default {
 #common_head{
     width: 3.75rem;
     height: 0.5rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     position: fixed;
     top: 0rem;
     left: 0rem;

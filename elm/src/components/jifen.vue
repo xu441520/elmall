@@ -63,7 +63,7 @@ export default {
 #common_head{
     width: 3.75rem;
     height: 0.5rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     position: fixed;
     top: 0rem;
     left: 0rem;
@@ -86,7 +86,7 @@ export default {
 }
 #ji_one{
     /* border: 1px solid red; */
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     height: 1.5rem;
     margin-top: 0.5rem;
     padding-top: 0.1rem;
@@ -109,14 +109,14 @@ font-size: 0.17rem;
 }
 #ji_two span:nth-child(2){
 font-size: 0.18rem;
-color: blue;
+color: rgb(49, 144, 232);
 position: absolute;
 top: 0.691rem;
 right: 0.91rem;
 }
 #ji_two span:nth-child(3){
 font-size: 0.17rem;
-color: blue;
+color: rgb(49, 144, 232);
 position: absolute;
 top: 0.7rem;
 right: 0.2rem;

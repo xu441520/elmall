@@ -20,7 +20,7 @@
             <img id="icon_four" @click="zhishow()" :src="imgsrc2" alt="">
         </div>
         <button id="zhi_seven" @click="zhifu()">确认支付</button>
-        <div v-show="hongshow" class="hong_fiveth animated heartBeat 0.4s">
+        <div v-if="hongshow" class="hong_fiveth animated heartBeat 0.4s">
             <img src="../../src/components/imgs/zhuyi.png" alt="">
             <p>暂不开放支付功能</p>
             <button @click="makesure()" >确认</button>
@@ -61,10 +61,14 @@ export default {
     },
     methods: {
         goBack(){
-            this.$router.go(-1);
+            // this.$router.go(-1);
+            if (this.hongshow !=true) {
+                this.$router.go(-1);
+            }
         },
         makesure(){
             this.hongshow = false;
+            
         },
         zhifu(){
             this.fushow = true;
@@ -145,7 +149,7 @@ export default {
 #common_head{
     width: 3.75rem;
     height: 0.5rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     position: fixed;
     top: 0rem;
     left: 0rem;

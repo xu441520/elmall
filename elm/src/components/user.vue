@@ -113,14 +113,6 @@ export default {
         console.log(this.accountName);
         this.img = this.$store.state.userImages;
         this.usering();
-        // this.couponing();
-        // if (this.$store.state.inputName.username=="") {
-        //     this.$store.commit("honglength2",0);        
-        // }
-        // if (this.nameing == "登录/注册") {
-            
-        // }
-        
         console.log("打印红包的个数："+this.$store.state.gift_amount);
         this.usname = this.$store.state.inputName.username;
 
@@ -234,7 +226,7 @@ export default {
 #common_head{
     width: 3.75rem;
     height: 0.5rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     position: fixed;
     top: 0rem;
     left: 0rem;
@@ -325,7 +317,7 @@ margin-left: 0.23rem;
 #user_one{
     width: 3.75rem;
     height: 0.9rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     margin-top: 0.5rem;
     /* border: 1px solid red; */
     position: relative;

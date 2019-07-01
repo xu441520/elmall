@@ -9,10 +9,10 @@
             <span>{{$store.state.inputName.username}}</span>
         </div>
         <div id="dui_second">
-            <input type="text" placeholder="请输入10位卡号">
-            <input type="text" placeholder="请输入6位卡密">  
+            <input @input="kahao()" v-model="maxka" :maxLength="10" type="text" placeholder="请输入10位卡号">
+            <input @input="kami()" v-model="maxmi" :maxLength="6" type="text" placeholder="请输入6位卡密">  
         </div>
-        <button id="dui_third">兑换</button>
+        <button :style="{backgroundColor:bianse}" id="dui_third">兑换</button>
         <div id="dui_four">
             <p>——温馨提示——</p>
         </div>
@@ -28,9 +28,29 @@
 <script>
 export default {
     name:'duihuan',
+    data(){
+        return{
+            bianse:"",
+            maxka:"",
+            maxmi:"",
+            show1:false,
+        }
+    },
     methods:{
         goBack(){
             this.$router.go(-1);
+        },
+        kahao(){
+            if (this.maxka.length<10 && this.maxmi.length<6) {
+                this.bianse="rgb(192, 190, 190)";
+            }
+        },
+        kami(){
+            if (this.maxka.length==10 && this.maxmi.length==6) {
+                this.bianse="green";
+            }else{
+                this.bianse="rgb(192, 190, 190)";
+            }
         }
     }
 }
@@ -39,7 +59,7 @@ export default {
 #common_head{
     width: 3.75rem;
     height: 0.5rem;
-    background-color: blue;
+    background-color: rgb(49, 144, 232);
     position: fixed;
     top: 0rem;
     left: 0rem;

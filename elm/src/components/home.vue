@@ -1,9 +1,9 @@
 <template>
   <div id="common">
     <div id="common_head">
-      <p>主页</p>
+      <!-- <p>主页</p> -->
 
-      <!-- <router-link to="/store"><span>商家详情</span></router-link> -->
+     
     </div>
     <div>
       <!-- 头部 -->
@@ -340,7 +340,7 @@ export default {
 #common_head {
   width: 3.75rem;
   height: 0.5rem;
-  background-color: blue;
+  background-color: rgb(49, 144, 232);
   position: fixed;
   top: 0rem;
   left: 0rem;
