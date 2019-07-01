@@ -49,6 +49,13 @@ export default {
         }
     },
     created(){
+        //正在加载效果
+        loadingInstance = Loading.service({
+            fullscreen: true,
+            text:'加载中...',
+            background:"grey",
+            spinner:"el-icon-loading"
+        });
         //首先，获取验证码
         this.getCode();
     },
