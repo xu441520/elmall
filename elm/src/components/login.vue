@@ -100,6 +100,7 @@ export default {
                     //登录成功，跳转到首页，编程氏路由跳转，传值query或者params传值
                     this.$router.push({
                         name:"citytwo",
+                        
                         // query:res.data,
                         // params:{pID:res.data.id}
                     });

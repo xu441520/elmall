@@ -6,10 +6,11 @@
             
         </div>
         <div id="x_one">
-            <input :class="{'null-input':isNullInput, 'no-null-input':!isNullInput}" type="text" v-model="$store.state.inputName.username" placeholder="输入用户名">
-            <p id="xiu_text">用户名只能修改一次（5-25字符之间）</p>
+            <input class="two" :style="{border:btnColor}" @input="xiuname()" type="text" v-model="usenameing"  placeholder="输入用户名">
+            <p v-show="btnshow" class="xiu_text">用户名只能修改一次（5-25字符之间）</p>
+            <p :style="{color:color1}" v-show="btnname" class="xiu_text">用户名只能修改一次（5-24字符之间）</p>
             <router-link to="/account">
-                <button id="makesure" @click="change()">确认修改</button>
+                <button :style="{opcity:xiugai}" id="makesure" @click="change()">确认修改</button>
             </router-link>
         </div>
     </div>
@@ -19,21 +20,37 @@ export default {
     name:'xiugai',
     data(){
         return{
-           isNullInput:false
-           
+           btnshow:true,
+           btnname:false,
+           btnColor:"",
+           color1:"",
+           usenameing:"",
+           xiugai:"",
         }
+    },
+    created(){
+        this.usenameing=this.$store.state.inputName.username;
     },
      methods:{
         xiugaiBack(){
             this.$router.go(-1);
         },
-        change(val) {
-        if (val === "") {
-                this.isNullInput = true;
-            } else {
-                this.isNullInput = false;
+        change(){
+            this.$router.push({
+                name: "account",
+            });
+        },
+        xiuname(){
+            if(this.usenameing.length<=5&&this.usenameing.length>25){
+                this.btnname=true;
+                this.btnshow=false;
+                this.btnColor="1px solid red";
+                this.color1="red";
+            }else{
+                this.btnshow=true;
+                this.btnname=false;
+                this.xiugai="1";
             }
-            console.log(this.isNullInput);
         }
         
     }
@@ -71,7 +88,7 @@ export default {
     
 }
 
-.null-input {
+.two{
   background-color: rgba(255, 255, 255, 0.8);
   color: #525661;
   width: 3.5rem;
@@ -97,10 +114,11 @@ export default {
     margin-left: 0.13rem;
     font-size: 0.19rem;
 } */
-#xiu_text{
+.xiu_text{
     width: 3.5rem;
-    margin-top: 0.1rem; 
-    margin-left: 0.13rem;
+    position: absolute;
+    top: 1.15rem;
+    left: 0.1rem;
     font-size: 0.15rem;
 }
 #makesure{
@@ -108,7 +126,8 @@ export default {
     height: 0.45rem;
     background-color:rgb(49, 144, 232);
     color: #fff;
-    margin-top: 0.2rem; 
+    opacity: 0.6;
+    margin-top: 0.3rem; 
     margin-left: 0.13rem;
     font-size: 0.19rem;
 }
