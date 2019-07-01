@@ -353,7 +353,6 @@ export default {
 
 }
 #ul {
-  /* border:0.01rem solid black; */
   white:3.7rem;
   position: absolute;
   bottom: 0;
