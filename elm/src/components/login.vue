@@ -38,6 +38,8 @@
     </div>
 </template>
 <script>
+import { Loading } from 'element-ui';
+let loadingInstance;
 export default {
     name:"login",
     data(){
