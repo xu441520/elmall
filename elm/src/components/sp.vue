@@ -252,7 +252,7 @@ export default {
   position: absolute;
   top: 0.7rem;
   left: 0.7rem;
-  font-size: 0.01rem;
+  font-size: 0.12rem;
   color: red;
   border: 0.01rem solid red;
   border-top-left-radius: 0.05rem;

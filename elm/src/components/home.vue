@@ -289,7 +289,7 @@ export default {
   color: black;
   border-radius: 15%;
   line-height: 0.18rem;
-  font-size: 0.1rem;
+  font-size: 0.12rem;
   font-weight: bold;
   position: absolute;
 }
@@ -332,7 +332,7 @@ export default {
   text-align: center;
   color: black;
   line-height: 0.18rem;
-  font-size: 0.1rem;
+  font-size: 0.12rem;
   position: absolute;
   margin-top: 0.2rem;
   margin-left: 1.4rem;
@@ -423,7 +423,7 @@ export default {
   position: absolute;
   top: 0.2rem;
   right: 0.02rem;
-  font-size: 0.05rem;
+  font-size: 0.12rem;
   color: white;
   background-color: blue;
   border-radius: 0.05rem;
@@ -437,7 +437,7 @@ export default {
   margin-top: 0.12rem;
   right: 0.02rem;
   border: 0.01rem solid blue;
-  font-size: 0.1rem;
+  font-size: 0.12rem;
   width: 0.47rem;
   text-align: center;
   color: blue;
@@ -446,7 +446,7 @@ export default {
 #star_two {
   /* border: 0.01rem solid black; */
   position: absolute;
-  top: 0.6rem;
+  top: 0.45rem;
   margin-top: 0.25rem;
   left: 1rem;
   font-size: 0.13rem;

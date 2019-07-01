@@ -104,7 +104,7 @@ export default {
                 name: "user",
             });
             this.$store.commit("getInp","");
-            // this.$store.commit("getInp","");
+            this.$store.commit("giftamount",0);
         },
         reigi(){
             this.$router.push({

@@ -186,7 +186,7 @@ body {
   color: #3091e9;
 }
 #city_hot ul li {
-  width: 0.932rem;
+  width: 0.92rem;
   border: 0.5px solid rgb(204, 204, 204);
 }
 #city_hot ul li:nth-child(1) {
