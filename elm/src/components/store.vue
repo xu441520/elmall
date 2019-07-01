@@ -166,13 +166,13 @@ export default {
   position: absolute;
   left: 0.7rem;
   top: 0.25rem;
-  font-size: 0.05rem;
+  font-size: 0.12rem;
 }
 #store_head_one_two p:nth-child(3) {
   position: absolute;
   left: 0.7rem;
   top: 0.4rem;
-  font-size: 0.05rem;
+  font-size: 0.12rem;
 }
 #img1 {
   height: 0.18rem;
@@ -276,7 +276,7 @@ export default {
 }
 #store_bottom_rig p:nth-child(2) {
   margin-bottom: 0.08rem;
-  font-size: 0.08rem;
+  font-size: 0.12rem;
 }
 #qisong {
   width: 1.2rem;
@@ -307,7 +307,7 @@ export default {
 #huodong_sp1 {
   width: 0.15rem;
   height: 0.15rem;
-  font-size: 0.1rem;
+  font-size: 0.12rem;
   background-color: red;
   color: white;
   position: absolute;
@@ -318,7 +318,7 @@ export default {
   border-radius: 0.02rem;
 }
 #huodong_sp2 {
-  font-size: 0.1rem;
+  font-size: 0.12rem;
   color: white;
   position: absolute;
   top: 0.6rem;
@@ -328,7 +328,7 @@ export default {
   border-radius: 0.02rem;
 }
 #huodong_sp3 {
-  font-size: 0.1rem;
+  font-size: 0.12rem;
   color: white;
   position: absolute;
   top: 0.6rem;
