@@ -511,13 +511,4 @@ export default {
     color: rgb(134, 133, 133);
     font-size: 0.15rem;
 }
-
-
-
-
-
-
-
-
-
 </style>
