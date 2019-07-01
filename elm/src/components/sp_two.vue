@@ -170,7 +170,7 @@ font-size: 0.2rem;
 }
 #store_bottom_rig p:nth-child(2) {
 margin-bottom: 0.08rem;
-font-size: 0.08rem;
+font-size: 0.12rem;
 }
 #store_bottom_rig + p {
 width: 1.2rem;

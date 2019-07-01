@@ -266,7 +266,7 @@ background-color: yellow;
 color: black;
 border-radius: 15%;
 line-height: 0.18rem;
-font-size: 0.1rem;
+font-size: 0.12rem;
 font-weight: bold;
 position: absolute;
 }
@@ -306,7 +306,7 @@ margin-top: 0.2rem;
 text-align: center;
 color: black;
 line-height: 0.18rem;
-font-size: 0.1rem;
+font-size: 0.12rem;
 position: absolute;
 margin-top: 0.2rem;
 margin-left: 1.4rem;
@@ -397,7 +397,7 @@ border: 0.01rem solid blue;
 position: absolute;
 top: 0.2rem;
 right: 0.02rem;
-font-size: 0.05rem;
+font-size: 0.12rem;
 color: white;
 background-color: blue;
 border-radius: 0.03rem;
@@ -411,7 +411,7 @@ top: 0.4rem;
 margin-top: 0.12rem;
 right: 0.02rem;
 border: 0.01rem solid blue;
-font-size: 0.1rem;
+font-size: 0.12rem;
 width: 0.47rem;
 text-align: center;
 color: blue;
@@ -422,7 +422,7 @@ position: absolute;
 top: 0.4rem;
 margin-top: 0.25rem;
 left: 1rem;
-font-size: 0.1rem;
+font-size: 0.12rem;
 color: gray;
 }
 #star_three {
@@ -431,7 +431,7 @@ position: absolute;
 right: 0.1rem;
 top: 0.7rem;
 margin-top: 0.15rem;
-font-size: 0.1rem;
+font-size: 0.12rem;
 }
 #star_three_one {
 color: grey;
@@ -445,7 +445,7 @@ width: 0.2rem;
 #geshu {
 /* border: 0.01rem solid black; */
 background-color: rgb(173, 171, 171);
-font-size: 0.1rem;
+font-size: 0.12rem;
 color: white;
 border-top-left-radius: 0.06rem;
 border-top-right-radius: 0.06rem;
