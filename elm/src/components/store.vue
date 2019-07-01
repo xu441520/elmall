@@ -1,27 +1,29 @@
 // 外卖店铺页
 <template>
   <div id="store">
-    <div id="store_head"> 
+    <div id="store_head">
       <div id="store_head_one">
         <p>
-          <img :src="'https://elm.cangdu.org/img/'+Detil.image_path" alt>
+          <img :src="'https://elm.cangdu.org/img/'+Detil.image_path" alt />
         </p>
         <div id="store_head_one_two">
           <p>{{Detil.name}}</p>
-          <p>商家配送/分钟送达/配送费￥5</p>
+          <p>商家配送/分钟i送达/{{Detil.piecewise_agent_fee.tips}}</p>
           <p>公告：{{Detil.promotion_info}}</p>
         </div>
-        <img src="./imgs/back.png" alt id="img1" @click="ret()">
+        <img src="./imgs/back.png" alt id="img1" @click="ret()" />
         <!-- <img src="./imgs/1.png" alt id="img2"> -->
-        <router-link :to="'/storedetail?id='+Detil.id"><img src="./imgs/1.png" alt="" id="img2"></router-link>
+        <router-link :to="'/storedetail?id='+Detil.id">
+          <img src="./imgs/1.png" alt id="img2" />
+        </router-link>
       </div>
       <!-- v-if ="Detil.activities.name !=''" -->
       <div id="huodong" v-if="Detil.activities.length > 0">
         <span id="huodong_sp1">{{Detil.activities[0].icon_name}}</span>
         <span id="huodong_sp2">{{Detil.activities[0].description}}(APP专享)</span>
         <router-link :to="'/huodong?id='+Detil.id">
-          <span id="huodong_sp3">1个活动</span>
-          <img src="./imgs/1.png" id="huodong_img">
+          <span id="huodong_sp3">{{Detil.activities.length}}个活动</span>
+          <img src="./imgs/1.png" id="huodong_img" />
         </router-link>
       </div>
       <div id="toogle">
@@ -40,10 +42,10 @@
 
     <div id="store_bottom">
       <div v-if="$store.state.danjia == 0 || $store.state.dian==0" id="gwc1">
-        <img src="./imgs/car.png" alt>
+        <img src="./imgs/car.png" alt />
       </div>
       <div v-if="$store.state.danjia > 0 &&$store.state.dian >0" id="gwc2" @click="chu()">
-        <img src="./imgs/car.png" alt>
+        <img src="./imgs/car.png" alt />
         <div id="dian">{{$store.state.dian}}</div>
       </div>
       <div id="store_bottom_rig">
@@ -55,12 +57,20 @@
     </div>
     <div id="Gwc" v-if="diang==true &&$store.state.danjia >0 &&$store.state.dian>0">
       <div id="Gwcb">
-        <ul id="ul" >
+        <ul id="ul">
           <li id="li">
             <span id="gwc">购物车</span>
-            <span id="qingkong" @click="qingkong();$store.state.dian=0;$store.state.danjia = 0;$store.state.sul=0">清空</span>
+            <span
+              id="qingkong"
+              @click="qingkong();$store.state.dian=0;$store.state.danjia = 0;$store.state.sul=0"
+            >清空</span>
           </li>
-          <li class="li1" :key="index" v-for="(value,index) in $store.state.name" v-if="value.__v > 0">
+          <li
+            class="li1"
+            :key="index"
+            v-for="(value,index) in $store.state.name"
+            v-if="value.__v > 0"
+          >
             <span id="spn">{{value.name}}</span>
             <span id="zongjia1">￥</span>
             <span id="zj" v-if="value.specfoods">{{value.specfoods[0].price}}</span>
@@ -74,8 +84,6 @@
               @click="value.__v++;$store.state.dian++;$store.state.danjia+=value.specfoods[0].pricex;"
             >+</span>
           </li>
-
-          
         </ul>
       </div>
     </div>
@@ -89,26 +97,31 @@ export default {
       isshow: true,
       Detil: {},
       diang: false,
-      ID:''
+      ID: ""
     };
   },
   created() {
     this.ID = this.$store.state.id;
-    console.log("店铺ID:"+this.$store.state.id);
+    console.log("店铺ID:" + this.$store.state.id);
     this.detil();
   },
   methods: {
-     chuan(){
-    this.$store.state.sul++;
-  },
-   chuan2(){
-    this.$store.state.sul--;
-  },
+    chuan() {
+      this.$store.state.sul++;
+    },
+    chuan2() {
+      this.$store.state.sul--;
+    },
     ret() {
-      this.$router.go(-1);
+      // this.$router.go(-1);
+      this.$router.push({
+        path: "/home", //路径
+        name: "home" //配置路由时的name
+      });
     },
     detil() {
-      const api = "https://elm.cangdu.org/shopping/restaurant/" + this.$store.state.id;
+      const api =
+        "https://elm.cangdu.org/shopping/restaurant/" + this.$store.state.id;
       this.$http({
         url: api,
         method: "get"
@@ -123,9 +136,9 @@ export default {
       this.diang = !this.diang;
       // console.log("-----------", this.$store.state.name);
     },
-     qingkong(){
+    qingkong() {
       // this.$store.state.name = [];
-      this.$store.commit("Qingkong")
+      this.$store.commit("Qingkong");
       // $store.state.dian = 0;
     }
   }
@@ -350,14 +363,13 @@ export default {
   position: absolute;
   top: 0;
   z-index: 2;
-
 }
 #ul {
-  white:3.7rem;
+  white: 3.7rem;
   position: absolute;
   bottom: 0;
-  max-height:2.8rem;
-  overflow-y: scroll
+  max-height: 2.8rem;
+  overflow-y: scroll;
 }
 #li {
   background-color: rgb(228, 223, 223);

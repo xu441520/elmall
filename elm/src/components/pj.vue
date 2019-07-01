@@ -179,7 +179,7 @@ export default {
          color: #6b6b6b;
      }
    #pj_p1+p+p{
-       font-size: 0.05rem;
+       font-size: 0.12rem;
        color: #6b6b6b;
    }
    #pj_two{
@@ -188,7 +188,7 @@ export default {
        height:0.4rem;
        position: absolute;
        left: 2rem;
-       font-size: 0.01rem;
+       font-size: 0.12rem;
        margin-top: 0.1rem;
        margin-bottom: 0.2rem;
    }
@@ -231,7 +231,7 @@ export default {
        background-color: lightgray;
    }
    .ttt{
-        font-size:0.1rem; 
+        font-size:0.12rem; 
         text-align:center;
         height: 0.18rem;
         line-height: 0.18rem;
