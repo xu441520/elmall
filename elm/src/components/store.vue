@@ -2,7 +2,7 @@
 <template>
   <div id="store">
     <div id="store_head">
-      <div id="store_head_one">
+      <div id="store_head_one" :style="{background:`url(https://elm.cangdu.org/img/${Detil.image_path}`}">
         <p>
           <img :src="'https://elm.cangdu.org/img/'+Detil.image_path" alt />
         </p>
@@ -160,7 +160,6 @@ export default {
 }
 #store_head_one {
   height: 0.8rem;
-  background-color: #abadb9;
   color: white;
 }
 #store_head_one > p > img {
