@@ -49,8 +49,8 @@ export default {
         },
         xiuname(){
             if(this.usenameing.length >= 5&&this.usenameing.length < 25){
-                this.btnname=true;
-                this.btnshow=false;
+                this.btnname=false;
+                this.btnshow=true;
                 this.btnColor="";
                 this.color1="";
                 this.xiugai="1";
