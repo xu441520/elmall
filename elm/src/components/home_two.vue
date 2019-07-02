@@ -73,8 +73,8 @@ v-model="value"
 <div id="business">
 <div id="list">
 <ul>
-<li class="list_li" :key="i" v-for="(v,i) in list">
-<router-link :to="'/store?id='+v.id">
+<li class="list_li" :key="i" v-for="(v,i) in list "  @click="getshopId(v.id)">
+<!-- <router-link :to="'/store?id='+v.id"> -->
 <img :src="'https://elm.cangdu.org/img/'+v.image_path" alt>
 <span class="brand">品牌</span>
 <span id="sj_name">{{v.name}}</span>
@@ -105,7 +105,7 @@ score-template="{value}"
 <span id="star_three_one">{{v.distance}}</span>/
 <span id="star_three_two">{{v.order_lead_time}}</span>
 </div>
-</router-link>
+<!-- </router-link> -->
 </li>
 </ul>
 </div>
@@ -195,7 +195,12 @@ this.Sysp = res.data;
 },
 dian(){
 this.xs2 = !this.xs2;
-}
+},
+ getshopId(v) {
+      this.$store.commit("getshopId", v);
+      console.log(v);
+      this.$router.push({ name: "store" });
+    }
 }
 };
 </script>
