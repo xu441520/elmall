@@ -186,25 +186,25 @@ body {
   color: #3091e9;
 }
 #city_hot ul li {
-  width: 0.92rem;
-  border: 0.5px solid rgb(204, 204, 204);
+  width: 0.93rem;
+  border: 0.1px solid rgb(204, 204, 204);
 }
 #city_hot ul li:nth-child(1) {
   border-left: none;
   border-bottom: none;
-  border-right: none;
 }
 #city_hot ul li:nth-child(2) {
-  border-bottom: none;
+  border-left: none;
+ border-bottom: none;
 }
 #city_hot ul li:nth-child(3) {
   border-left: none;
   border-bottom: none;
-  border-right: none;
 }
 #city_hot ul li:nth-child(4) {
-  border-right: none;
+  border-left: none;
   border-bottom: none;
+  border-right: none;
 }
 #city_hot ul li:nth-child(5) {
   border-left: none;
