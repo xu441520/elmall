@@ -10,15 +10,15 @@ export default {
       state.count -= n;
     },
     getGeohash(state,v){
-         state.geohash = v;
+      state.geohash = v;
     }
     ,
     getshopId(state,v1){
       state.id = v1;
     },
     getscore2(state,v1){
-        state.score2 = v1;
-      }
+      state.score2 = v1;
+    }
     ,
     //贺子涵
     getdanjia(state,a){
