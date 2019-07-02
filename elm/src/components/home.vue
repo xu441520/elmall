@@ -117,6 +117,7 @@ export default {
   props: [],
   data() {
     return {
+      score2:"",
       name: "",
       datas: [],
       list: [], //店铺列表接口返回一个数组数据
@@ -152,6 +153,9 @@ export default {
       this.$store.commit("getshopId", v);
       console.log(v);
       this.$router.push({ name: "store" });
+    },
+    getscore2(v){
+        this.$store.commit("getscore2",v);
     },
     fenlei2() {
       const api = "https://elm.cangdu.org/v2/index_entry";
@@ -245,7 +249,6 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-
 .spfl img {
   width: 0.5rem;
 }

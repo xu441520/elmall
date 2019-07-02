@@ -2,9 +2,10 @@
 <template>
   <div id="store">
     <div id="store_head">
-      <div id="store_head_one" :style="{background:`url(https://elm.cangdu.org/img/${Detil.image_path})`}">
+      <div id="store_head_one">
+        <img :src="'https://elm.cangdu.org/img/'+Detil.image_path" id="beijing">
         <p>
-          <img :src="'https://elm.cangdu.org/img/'+Detil.image_path" alt />
+          <img :src="'https://elm.cangdu.org/img/'+Detil.image_path"/>
         </p>
         <div id="store_head_one_two">
           <p>{{Detil.name}}</p>
@@ -473,6 +474,11 @@ export default {
   background-color: rgba(193, 193, 211, 0.4);
   /* border: 0.01rem solid black; */
   position: relative;
+}
+#beijing{
+  width: 3.75rem;
+  height: 0.8rem;
+  filter: blur(0.05rem)
 }
 </style>
 
