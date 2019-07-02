@@ -13,7 +13,7 @@
             </router-link>
             </p>
             <!-- <p>{{$store.state.inputName.username}}</p> -->
-            <p class="tele" @click="denglu()" v-show="nameshow">{{this.$store.state.inputName.username||nameing}}</p>
+            <p class="tele" @click="denglu()" v-show="nameshow">{{this.$store.state.useName||nameing}}</p>
             <!-- <p class="tele">{{nameing}}</p> -->
             <p id="user_tele" class="el-icon-mobile-phone"></p>
             <span id="user_word">暂无绑定手机号</span>

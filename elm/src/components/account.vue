@@ -17,19 +17,15 @@
             <!-- <p id="account_one"><img src="../../src/components/imgs/touxiang.png" alt=""></p> -->
             <img id="one_img" src="../../src/components/imgs/youj.png" alt="">
         </div>
-        <div id="account_two">
+        <div @click="yonghuming()" id="account_two">
             <span>用户名</span>
             <!-- <span>{{$store.state.inputName.username}}</span> -->
-            <span v-text="this.$store.state.inputName.username">{{$store.state.inputName.username}}</span>
-            <router-link to="/xiugai">
-                <img id="two_img" src="../../src/components/imgs/youj.png" alt="">
-            </router-link>
+            <span>{{this.$store.state.useName}}</span>
+            <img id="two_img" src="../../src/components/imgs/youj.png" alt="">
         </div>
-        <div id="account_three">
+        <div @click="shouhuodizhi()" id="account_three">
             <span>收货地址</span>
-            <router-link to="/addressing">
-                <img id="three_img" src="../../src/components/imgs/youj.png" alt="">
-            </router-link>
+            <img id="three_img" src="../../src/components/imgs/youj.png" alt="">
         </div>
         <div id="account_four">
             <p>账户绑定</p>
@@ -85,6 +81,7 @@ export default {
         console.log("打印用户名");
         console.log(this.$route.query);
         this.img1=this.$store.state.userImages;
+        console.log("打印用户名部分"+this.$store.state.useName);
     },
     methods: {
         goBack(){
@@ -98,14 +95,21 @@ export default {
         tele(){
             this.hongshow = true;
         },
-        // tuichu(){
-        //     this.fushow = true;
-        // },
+        yonghuming(){
+            this.$router.push({
+                name: "xiugai",
+            });
+        },
+        shouhuodizhi(){
+            this.$router.push({
+                name: "addressing",
+            });
+        },
         tiaozhuan(){
             this.$router.push({
                 name: "user",
             });
-            this.$store.commit("getInp","");
+            this.$store.commit("getname","");
             this.$store.commit("giftamount",0);
         },
         reigi(){

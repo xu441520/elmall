@@ -23,5 +23,7 @@
     cunaddress:'',//存储新增地址的address；
     honglength:"",//存储红包的length
     gift_amount:"",//存储红包3个的数
+    // 只获取用户名部分
+    useName:'',
 
   }

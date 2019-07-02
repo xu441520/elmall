@@ -28,17 +28,24 @@ export default {
            xiugai:"",
         }
     },
-    created(){
-        this.usenameing=this.$store.state.inputName.username;
-    },
+    // created(){
+    //     this.usenameing=this.$store.state.useName;
+    // },
      methods:{
         xiugaiBack(){
-            this.$router.go(-1);
+             this.$router.push({
+                name: "account",
+                
+            });  
         },
         change(){
-            this.$router.push({
+            if (this.usenameing!="") {
+                this.$store.commit("getname",this.usenameing);
+                this.$store.commit("giftamount",3);
+                this.$router.push({
                 name: "account",
-            });
+            });   
+            }   
         },
         xiuname(){
             if(this.usenameing.length >= 5&&this.usenameing.length < 25){

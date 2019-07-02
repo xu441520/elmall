@@ -60,7 +60,11 @@ export default {
     getInp(state,a){
       state.inputName = a;
   },
-  
+  // 只有公用数据名部分
+  getname(state,a){
+    state.useName = a;
+},
+
   // 用户图片部分
   userImg(state,a){
       state.userImages = a;
