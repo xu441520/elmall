@@ -2,7 +2,7 @@
 <template>
   <div id="store">
     <div id="store_head">
-      <div id="store_head_one" :style="{background:`url(https://elm.cangdu.org/img/${Detil.image_path}`}">
+      <div id="store_head_one" :style="{background:`url(https://elm.cangdu.org/img/${Detil.image_path})`}">
         <p>
           <img :src="'https://elm.cangdu.org/img/'+Detil.image_path" alt />
         </p>
@@ -19,7 +19,10 @@
       </div>
       <!-- v-if ="Detil.activities.name !=''" -->
       <div id="huodong" v-if="Detil.activities.length > 0">
-        <span id="huodong_sp1">{{Detil.activities[0].icon_name}}</span>
+        <span id="huodong_sp1" v-if="Detil.activities[0].icon_name == '减'">{{Detil.activities[0].icon_name}}</span>
+        <span id="huodong_sp01" v-if="Detil.activities[0].icon_name == '特'">{{Detil.activities[0].icon_name}}</span>
+        <span id="huodong_sp02" v-if="Detil.activities[0].icon_name == '保'">{{Detil.activities[0].icon_name}}</span>
+
         <span id="huodong_sp2">{{Detil.activities[0].description}}(APP专享)</span>
         <router-link :to="'/huodong?id='+Detil.id">
           <span id="huodong_sp3">{{Detil.activities.length}}个活动</span>
@@ -322,6 +325,32 @@ export default {
   height: 0.15rem;
   font-size: 0.12rem;
   background-color: red;
+  color: white;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.05rem;
+  text-align: center;
+  line-height: 0.15rem;
+  border-radius: 0.02rem;
+}
+#huodong_sp01 {
+  width: 0.15rem;
+  height: 0.15rem;
+  font-size: 0.12rem;
+  background-color: green;
+  color: white;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.05rem;
+  text-align: center;
+  line-height: 0.15rem;
+  border-radius: 0.02rem;
+}
+#huodong_sp02 {
+  width: 0.15rem;
+  height: 0.15rem;
+  font-size: 0.12rem;
+  background-color: yellow;
   color: white;
   position: absolute;
   top: 0.6rem;
