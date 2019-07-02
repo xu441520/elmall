@@ -10,7 +10,7 @@
             <p v-show="btnshow" class="xiu_text">用户名只能修改一次（5-25字符之间）</p>
             <p :style="{color:color1}" v-show="btnname" class="xiu_text">用户名只能修改一次（5-24字符之间）</p>
             <router-link to="/account">
-                <button :style="{Opacity:xiugai}" id="makesure" @click="change()">确认修改</button>
+                <button :style="{opacity:xiugai}" id="makesure" @click="change()">确认修改</button>
             </router-link>
         </div>
     </div>

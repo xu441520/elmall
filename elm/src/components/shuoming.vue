@@ -1,5 +1,5 @@
 <template>
-    <div style="height:100%">
+    <div id="shuo_wrap">
         <div id="common_head">
             <img @click="goBack()" src="../../src/components/imgs/back.png" alt="">
             <span id="common_use">我的优惠</span>
@@ -79,6 +79,10 @@ export default {
     text-align: center;
     line-height: 0.5rem;
     margin-left: 1rem;
+}
+#shuo_wrap{
+    height: 100vh;
+    background-color: #fff;
 }
 #big_one{
     background-color: #fff;

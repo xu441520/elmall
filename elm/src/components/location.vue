@@ -29,7 +29,7 @@
         </li>
       </ul>
       <!-- <span>搜索历史</span> -->
-      <ul>
+      <ul id="ul2">
         <li @click="sousuoli()" :key="i" v-for="(v,i) in history">{{v}}</li>
       </ul>
     </div>
@@ -163,6 +163,16 @@ body {
   /* height: 0.5rem; */
   border-bottom: 0.01rem solid grey;
   /* line-height: 0.5rem; */
+}
+#ul2{
+  position: relative;
+  top: 0.1rem;
+  left: 0rem;
+}
+#ul2 li{
+  margin-top: 0.1rem;
+  font-size: 0.2rem;
+  text-indent:0.8em; 
 }
 #na {
   color: black;

@@ -84,12 +84,12 @@ export default new Router({
          component: City
     },
     {
-      path: 'city',
+      path: '/city',
       name: 'city',
       component: City
     },
     {
-      path: 'citytwo',
+      path: '/citytwo',
       name: 'citytwo',
       component: Citytwo
     },
