@@ -143,8 +143,7 @@ export default {
       // this.geohash = this.$route.query.geohash;
       this.geohash = this.$store.state.geohash;
       const api =
-        "https://elm.cangdu.org/v4/restaurants?geohash=" +
-        $store.state.geohash +
+        "https://elm.cangdu.org/v4/restaurants?geohash=" +this.$store.state.geohash +
         "&keyword=" +
         this.food;
       console.log(api);
