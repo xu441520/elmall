@@ -320,7 +320,7 @@ export default {
   position: absolute;
   margin-left: 0.4rem;
   font-weight: bold;
-  /* font-size: 0.17rem; */
+  font-size: 0.15rem;
   color: black;
 }
 #pat {

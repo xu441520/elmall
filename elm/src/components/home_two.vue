@@ -240,7 +240,7 @@ justify-content: space-between;
 
 .el-input__inner {
 /* float: left; */
-width: 30vw;
+width: 28vw;
 /* margin: 0 auto; */
 border: none;
 border-radius: 0%;
@@ -248,7 +248,7 @@ height: 0.32rem;
 margin-top: 0.07rem;
 text-align: center;
 border-right: 0.01rem solid rgb(197, 195, 195);
-background-color: rgba(0, 0, 0, 0);
+background-color: rgb(255, 255, 255);
 color: black;
 }
 
@@ -288,7 +288,7 @@ line-height: 0.12rem;
 position: absolute;
 margin-left: 0.4rem;
 font-weight: bold;
-/* font-size: 0.17rem; */
+font-size: 0.15rem;
 color: black;
 }
 #pat {
@@ -526,7 +526,7 @@ width: 1rem;
 /* float: right; */
 margin-top: 0.08rem;
 margin-right: 0.1rem;
-background-color: rgb(245, 245, 245);
+background-color: rgb(255, 255, 255);
 border:none;
 /* border-right: 0.01rem solid rgb(121, 120, 120); */
 color: lightgrey;
