@@ -87,9 +87,7 @@
                 <p id="pfour">我的</p>
             </router-link>
             <!-- <img src="../../src/components/imgs/wode.png" alt=""> -->
-        </div>
-        
-        
+        </div>    
     </div>
 </template>
 <script>
