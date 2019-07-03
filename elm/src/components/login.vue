@@ -9,7 +9,7 @@
             <input v-model="username" type="text" placeholder="账号"><br>
         </div>
         <div id="login_three" @click="display()">
-             <input v-model="password" type="text" placeholder="密码" :type="show">
+             <input v-model="password" type="text" placeholder="密码" :type="show" id="inp001">
              <el-switch v-model="value" active-color="#13ce66" inactive-color="rgb(204,204,204)"></el-switch>
              <br>
         </div>
@@ -160,8 +160,9 @@ export default {
          border-bottom: 0.01rem solid rgb(204, 204, 204);
          position: relative;
      }
-     #login_three input{
+     #inp001{
          margin-left: 0.12rem;
+         height: 0.12rem;
      }
      .el-switch__core{
          position: absolute;
