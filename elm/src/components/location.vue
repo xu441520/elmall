@@ -176,7 +176,7 @@ body {
 }
 #ul1 li {
   /* height: 0.5rem; */
-  border-bottom: 0.01rem solid grey;
+  /* border-bottom: 0.01rem solid grey; */
   /* line-height: 0.5rem; */
 }
 #ul2{
