@@ -27,10 +27,6 @@
           <span id="dre">{{v.address}}</span>
         </li>
       </ul>
-      <!-- <span>搜索历史</span> -->
-      <ul id="ul2">
-        <li @click="sousuoli()" :key="i" v-for="(v,i) in history">{{v}}</li>
-      </ul>
     </div>
   </div>
 </template>
