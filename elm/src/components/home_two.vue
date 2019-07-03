@@ -83,13 +83,15 @@ v-model="value"
 <!-- <span v-if="value.icon_name == '准'" >{{value.name}}</span> -->
 </div>
 <div id="star_one">
-<el-rate
-v-model="v.rating"
-disabled
-show-score
-text-color="#ff9900"
-score-template="{value}"
-></el-rate>
+ <van-rate
+  v-model="v.rating"
+  allow-half
+  void-icon="star"
+  void-color="#eee"
+  size = 0.12rem
+  gutter = 0.02rem
+/>
+<span id="pingfen">{{v.rating}}</span>
 </div>
 <span id="star_one_right">月售{{v.recent_order_num}}单</span>
 <span id="star_two">
@@ -309,12 +311,12 @@ margin-top: 0.2rem;
 /* border: 0.01rem solid black; */
 /* display: inline-block; */
 text-align: center;
-color: black;
-line-height: 0.18rem;
-font-size: 0.12rem;
-position: absolute;
-margin-top: 0.2rem;
-margin-left: 1.4rem;
+  color: black;
+  line-height: 0.18rem;
+  font-size: 0.12rem;
+  position: absolute;
+  margin-top: 0.2rem;
+  margin-left: 0.9rem;
 }
 #common_head {
 width: 3.75rem;
@@ -526,5 +528,11 @@ border:none;
 /* border-right: 0.01rem solid rgb(121, 120, 120); */
 color: lightgrey;
 font-size: 0.15rem;
+}
+#pingfen{
+  font-size: 0.12rem;
+  position: absolute;
+  top: 0;
+  left: 0.7rem;
 }
 </style>
