@@ -23,9 +23,15 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
 // 引入vant模块
 import { Icon } from 'vant';
 Vue.use(Icon);
+import { Rate } from 'vant';
+Vue.use(Vant);
+Vue.use(Rate);
 
 Vue.config.productionTip = false
 //在main.js中创建store

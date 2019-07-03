@@ -12,24 +12,26 @@
          <div id="pj_two">
             <p>
                 服务态度
-                <el-rate 
-                v-model="data1.service_score.toFixed(1)"
-                disabled
-                show-score
-                text-color="#ff9900"
-                score-template="{value}"
-                style="height=0.01rem">
-                </el-rate>
+                <van-rate
+  v-model="data1.service_score.toFixed(1)"
+  allow-half
+  void-icon="star"
+  void-color="#eee"
+  size = 0.12rem
+  gutter = 0.02rem
+/>
+<span id="pingfen">{{data1.service_score.toFixed(1)}}</span>
             </p>
             <p>菜品评价
-                <el-rate 
-                v-model="data1.food_score.toFixed(1)"
-                disabled
-                show-score
-                text-color="#ff9900"
-                score-template="{value}"
-                style="height=0.05rem">
-                </el-rate>
+        <van-rate
+  v-model="data1.food_score.toFixed(1)"
+  allow-half
+  void-icon="star"
+  void-color="#eee"
+  size = 0.12rem
+  gutter = 0.02rem
+/>
+<span id="pingfen1">{{data1.food_score.toFixed(1)}}</span>
             </p>
             <p>
                 <span>送达时间</span>
@@ -189,7 +191,7 @@ export default {
        position: absolute;
        left: 2rem;
        font-size: 0.12rem;
-       margin-top: 0.1rem;
+       margin-top: 0.15rem;
        margin-bottom: 0.2rem;
    }
   .el-row {
@@ -261,4 +263,18 @@ export default {
         white-space: nowrap;
         vertical-align: top;
    }
+   #pingfen{
+  font-size: 0.12rem;
+  position: absolute;
+  top: 0;
+  left: 0.75rem;
+  color: orange;
+}
+ #pingfen1{
+  font-size: 0.12rem;
+  position: absolute;
+  top: 0.35rem;
+  left: 0.75rem;
+  color: orange;
+}
 </style>

@@ -2,8 +2,6 @@
   <div id="common">
     <div id="common_head">
       <!-- <p>主页</p> -->
-
-     
     </div>
     <div>
       <!-- 头部 -->
@@ -51,7 +49,12 @@
         </div>
         <div id="list">
           <ul>
-            <li class="list_li" :key="i" v-for="(v,i) in list" @click="getshopId(v.id);getscore2(v.rating)">
+            <li
+              class="list_li"
+              :key="i"
+              v-for="(v,i) in list"
+              @click="getshopId(v.id);getscore2(v.rating)"
+            >
               <!-- <router-link :to="'/store?id='+v.id" @click="getshopId(v.id)"> -->
               <img :src="'https://elm.cangdu.org/img/'+v.image_path" alt />
               <span class="brand">品牌</span>
@@ -61,13 +64,15 @@
                 <!-- <span v-if="value.icon_name == '准'" >{{value.name}}</span> -->
               </div>
               <div id="star_one">
-                <el-rate
-                  v-model="v.rating"
-                  disabled
-                  show-score
-                  text-color="#ff9900"
-                  score-template="{value}"
-                ></el-rate>
+                <van-rate
+  v-model="v.rating"
+  allow-half
+  void-icon="star"
+  void-color="#eee"
+  size = 0.12rem
+  gutter = 0.02rem
+/>
+<span id="pingfen">{{v.rating}}</span>
               </div>
               <span id="star_one_right">月售{{v.recent_order_num}}单</span>
               <div id="star_two">
@@ -112,12 +117,18 @@
   </div>
 </template>
 <script>
+// import Vue from 'vue';
+// import 'vant/rate/index.css';
+// import 'vant/rate/style';
+// import { Rate } from 'vant';
+
+// Vue.use(Rate);
 export default {
   name: "common",
   props: [],
   data() {
     return {
-      score2:"",
+      score2: "",
       name: "",
       datas: [],
       list: [], //店铺列表接口返回一个数组数据
@@ -126,6 +137,7 @@ export default {
         // 所有的参数同 swiper 官方 api 参数  swiper4.x
         // ...
         initialSlide: 0,
+        
         pagination: {
           el: ".swiper-pagination"
         },
@@ -144,9 +156,8 @@ export default {
     this.data1 = this.$route.query; //从location页传过来名字和经纬度
     console.log("经纬度为:" + this.data1.geohash); //打印名字和经纬度
     console.log("jingweidu:" + this.$store.state.geohash);
-    console.log("dizhiming:"+this.$store.state.dizhiname);
+    console.log("dizhiming:" + this.$store.state.dizhiname);
     this.score2 = this.$store.state.score2;
-    
   },
   methods: {
     // getName(v1){
@@ -156,10 +167,10 @@ export default {
     getshopId(v) {
       this.$store.commit("getshopId", v);
       console.log(v);
-      this.$router.push({ name: "store"});
+      this.$router.push({ name: "store" });
     },
-    getscore2(v){
-        this.$store.commit("getscore2",v);
+    getscore2(v) {
+      this.$store.commit("getscore2", v);
     },
     fenlei2() {
       const api = "https://elm.cangdu.org/v2/index_entry";
@@ -342,7 +353,7 @@ export default {
   font-size: 0.12rem;
   position: absolute;
   margin-top: 0.2rem;
-  margin-left: 1.4rem;
+  margin-left: 0.9rem;
 }
 #common_head {
   width: 3.75rem;
@@ -472,5 +483,11 @@ export default {
 }
 #star_three_two {
   color: gray;
+}
+#pingfen{
+  font-size: 0.12rem;
+  position: absolute;
+  top: 0;
+  left: 0.7rem;
 }
 </style>
