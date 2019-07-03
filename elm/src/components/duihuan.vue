@@ -6,7 +6,7 @@
         </div>
         <div id="dui_first">
             <span>成功兑换后将关联到当前账号：</span>
-            <span>{{$store.state.inputName.username}}</span>
+            <span>{{this.$store.state.useName}}</span>
         </div>
         <div id="dui_second">
             <input @input="kahao()" v-model="maxka" :maxLength="10" type="text" placeholder="请输入10位卡号">

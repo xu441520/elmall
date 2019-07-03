@@ -6,7 +6,7 @@
         </div>
         <div id="elecard_one">
             <span>为账户</span>
-            <span>{{$store.state.inputName.username}}</span>
+            <span>{{this.$store.state.useName}}</span>
             <span>购买会员</span>
         </div>
         <router-link to="/shuoming">
@@ -34,9 +34,7 @@
         <div id="elecard_six">
             <p>1个月</p>
             <p>￥20</p>
-            <router-link to="/zhifu">
-                <button>购买</button>
-            </router-link>
+            <button @click="goumai()">购买</button>
         </div>
         <router-link to="/duihuan">
             <div id="elecard_seven">
@@ -60,6 +58,11 @@ export default {
     methods:{
         goBack(){
             this.$router.go(-1);
+        },
+        goumai(){
+            this.$router.push({
+                name: "zhifu",
+            });
         }
     }
 }
@@ -217,7 +220,7 @@ export default {
     /* border: 1px solid red; */
     background-color: #fff;
     height: 0.5rem;
-    line-height: 0.5rem;
+    /* line-height: 0.5rem; */
     position: relative;
     border-top: 0.5px solid lightgray;
     border-bottom: 0.5px solid lightgray;
@@ -226,6 +229,7 @@ export default {
     font-size: 0.2rem;
     display: inline-block;
     margin-left: 0.15rem;
+     line-height: 0.5rem;
 }
 #elecard_six p:nth-child(2){
     font-size: 0.22rem;
@@ -235,16 +239,20 @@ export default {
     top: 0.02rem;
     left: 0.7rem;
     color: orangered;
+     line-height: 0.5rem;
 }
 #elecard_six button{
+    /* border: 1px solid red; */
     position: absolute;
-    top: 0.15rem;
+    top: 0.07rem;
     right: 0.12rem;
     border: 0.5px solid orangered;
     color: orangered;
     background-color: #fff;
     font-size: 0.16rem;
     width: 0.6rem;
+    height: 0.35rem;
+    line-height: 0.25rem;
 
 }
 #elecard_seven{
