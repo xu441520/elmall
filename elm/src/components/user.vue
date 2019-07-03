@@ -126,7 +126,9 @@ export default {
     },
      methods: {
         goBack(){
-            this.$router.go(-1);
+            this.$router.push({
+                name: "user",
+            });
         },
         yumoney(){
             this.$router.push({
@@ -324,7 +326,7 @@ margin-left: 0.23rem;
     width: 3.75rem;
     height: 0.9rem;
     background-color: rgb(49, 144, 232);
-    margin-top: 0.5rem;
+    margin-top: 0.49rem;
     /* border: 1px solid red; */
     position: relative;
 }
