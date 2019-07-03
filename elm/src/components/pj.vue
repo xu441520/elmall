@@ -68,13 +68,14 @@
            <div style="font-size:0.1rem;position:absolute;left:0.6rem;top:0.05rem;">
                <p style="margin-top:0.1rem">{{v.username}}</p>
                <p style="width:2rem;">
-                     <el-rate
-                v-model="v.rating_star"
-                disabled
-                show-score
-                text-color="#ff9900"
-                style="height=0.01rem">
-                    </el-rate>
+                    <van-rate
+  v-model="v.rating_star"
+  allow-half
+  void-icon="star"
+  void-color="#eee"
+  size = 0.12rem
+  gutter = 0.02rem
+/>
                 <span style="position:absolute;left:1.4rem;top:0.25rem;">{{v.time_spent_desc}}</span>
                </p>
                <p :key="i1" v-for="(v1,i1) in v.item_ratings" style="float:left">
