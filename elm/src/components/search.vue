@@ -80,7 +80,8 @@ export default {
       shp: false,
       lar: "",
       lon: "",
-      geohash: ""
+      geohash: "",
+      
     };
   },
   // watch: {
@@ -143,7 +144,7 @@ export default {
       this.geohash = this.$store.state.geohash;
       const api =
         "https://elm.cangdu.org/v4/restaurants?geohash=" +
-        this.geohash +
+        $store.state.geohash +
         "&keyword=" +
         this.food;
       console.log(api);

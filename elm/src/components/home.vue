@@ -16,7 +16,7 @@
         <!-- <img src="./imgs/fangdajing.png" id="'search?'"> -->
 
         <!-- 修改地址id -->
-        <span id="add">{{geohash}}</span>
+        <span id="add">{{$store.state.getName}}</span>
         <!-- 跳转到我的 -->
         <router-link to="/user">
           <img src="./imgs/reload.png" id="my" />
@@ -131,13 +131,11 @@ export default {
         loop: true
       }
     };
-    data1: "";
+    // data1: "";
   },
   computed: {},
   created() {
     this.fenlei2();
-    this.geohash = this.$store.state.geohash;
-    console.log(this.Name);
     this.List();
     this.data1 = this.$route.query; //从location页传过来名字和经纬度
     console.log("经纬度为:" + this.data1.geohash); //打印名字和经纬度
@@ -151,7 +149,7 @@ export default {
     getshopId(v) {
       this.$store.commit("getshopId", v);
       console.log(v);
-      this.$router.push({ name: "store" });
+      this.$router.push({ name: "store"});
     },
     fenlei2() {
       const api = "https://elm.cangdu.org/v2/index_entry";

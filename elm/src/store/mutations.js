@@ -11,8 +11,10 @@ export default {
     },
     getGeohash(state,v){
          state.geohash = v;
-    }
-    ,
+    },
+    getName(state,v){
+        state. getName = v;
+    },
     getshopId(state,v1){
       state.id = v1;
     }
