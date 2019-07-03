@@ -234,18 +234,20 @@ left: 1.4rem;
 height: 0.5rem;
 /* border: 0.01rem solid black; */
 text-align: center;
+display: flex;
+justify-content: space-between;
 }
 
 .el-input__inner {
-float: left;
-width: 33vw;
+/* float: left; */
+width: 30vw;
 /* margin: 0 auto; */
 border: none;
 border-radius: 0%;
 height: 0.32rem;
 margin-top: 0.07rem;
 text-align: center;
-border-right: 0.01rem solid rgb(197, 195, 195);
+border: 0.01rem solid rgb(197, 195, 195);
 background-color: rgba(0, 0, 0, 0);
 color: black;
 }
@@ -520,7 +522,7 @@ z-index: 2;
 #anniu{
 height: 0.31rem;
 width: 1rem;
-float: right;
+/* float: right; */
 margin-top: 0.08rem;
 margin-right: 0.1rem;
 background-color: rgb(245, 245, 245);
