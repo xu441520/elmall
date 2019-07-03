@@ -133,7 +133,7 @@ export default {
 }
 #advice{
     position: absolute;
-    top: 1.3rem;
+    top: 1.4rem;
     left: 0rem;
     color: orangered;
     background-color:rgb(252, 238, 212);
@@ -147,7 +147,11 @@ export default {
     margin-bottom: 4%;
     color: rgb(116, 116, 116); 
 }
+#sou_one ul{
+    margin-top: 0.2rem;
+}
 #sou_one ul li{
-    border: 1px solid red;
+    border-top: 0.5px solid lightgray;
+    border-bottom: 0.5px solid lightgray;
 }
 </style>
