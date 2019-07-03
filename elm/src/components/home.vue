@@ -51,7 +51,7 @@
         </div>
         <div id="list">
           <ul>
-            <li class="list_li" :key="i" v-for="(v,i) in list" @click="getshopId(v.id)">
+            <li class="list_li" :key="i" v-for="(v,i) in list" @click="getshopId(v.id);getscore2(v.rating)">
               <!-- <router-link :to="'/store?id='+v.id" @click="getshopId(v.id)"> -->
               <img :src="'https://elm.cangdu.org/img/'+v.image_path" alt />
               <span class="brand">品牌</span>
@@ -117,6 +117,7 @@ export default {
   props: [],
   data() {
     return {
+      score2:"",
       name: "",
       datas: [],
       list: [], //店铺列表接口返回一个数组数据
@@ -140,6 +141,7 @@ export default {
     this.data1 = this.$route.query; //从location页传过来名字和经纬度
     console.log("经纬度为:" + this.data1.geohash); //打印名字和经纬度
     console.log("jingweidu:" + this.$store.state.geohash);
+    this.score2 = this.$store.state.score2;
   },
   methods: {
     // getName(v1){
@@ -150,6 +152,9 @@ export default {
       this.$store.commit("getshopId", v);
       console.log(v);
       this.$router.push({ name: "store"});
+    },
+    getscore2(v){
+        this.$store.commit("getscore2",v);
     },
     fenlei2() {
       const api = "https://elm.cangdu.org/v2/index_entry";
@@ -243,7 +248,6 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-
 .spfl img {
   width: 0.5rem;
 }

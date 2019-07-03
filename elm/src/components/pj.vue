@@ -5,7 +5,7 @@
         <div id="pj_head">
         <!-- <img src="./imgs/car.png" alt=""> -->
         <div id="pj_one">
-            <p id="pj_p1">{{this.score2}}</p>
+            <p id="pj_p1">{{this.$store.state.score2}}</p>
             <p>综合评价</p>
             <p>高于周边商家{{(data1.compare_rating*100).toFixed(1)}}%</p>
         </div>
@@ -111,7 +111,7 @@ export default {
         this.getScore();//评价分数
         this.getClassify();//评价分类
         this.getSubstance();//评价内容
-        this.score2 = this.$route.query.score;
+        this.score2 = this.$store.state.score2;
     },
     methods:{
         getScore(){

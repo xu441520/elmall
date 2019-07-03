@@ -1,6 +1,7 @@
  export default {
     geohash:"",//经纬度
     id:"",//店铺ID
+    score2:"",//综合评分
     //贺子涵
     danjia:0,
     dian:0,
@@ -23,5 +24,6 @@
     cunaddress:'',//存储新增地址的address；
     honglength:"",//存储红包的length
     gift_amount:"",//存储红包3个的数
-
+    // 只获取用户名部分
+    useName:'',
   }

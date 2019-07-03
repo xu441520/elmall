@@ -10,13 +10,22 @@ export default {
       state.count -= n;
     },
     getGeohash(state,v){
+<<<<<<< HEAD
          state.geohash = v;
     },
     getName(state,v){
         state. getName = v;
     },
+=======
+      state.geohash = v;
+    }
+    ,
+>>>>>>> 189e59ca82344e87451f74e0f5d90bac48ef18b9
     getshopId(state,v1){
       state.id = v1;
+    },
+    getscore2(state,v1){
+      state.score2 = v1;
     }
     ,
     //贺子涵
@@ -62,7 +71,11 @@ export default {
     getInp(state,a){
       state.inputName = a;
   },
-  
+  // 只有公用数据名部分
+  getname(state,a){
+    state.useName = a;
+},
+
   // 用户图片部分
   userImg(state,a){
       state.userImages = a;

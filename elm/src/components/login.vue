@@ -97,6 +97,12 @@ export default {
                     alert(res.data.message);//登录失败
                 }
                 else{
+                    // 发送了用户名部分
+                    this.$store.commit("getInp",res.data);
+                    // 只发送用户名部分
+                    this.$store.commit("getname",res.data.username);
+                    console.log("打印公用数据名部分"+res.data.username);
+                    //登录成功，跳转到首页，编程式路由跳转，传值query或者params传值
                     //登录成功，跳转到首页，编程氏路由跳转，传值query或者params传值
                     this.$router.push({
                         name:"citytwo",

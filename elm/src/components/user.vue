@@ -13,9 +13,11 @@
             </router-link>
             </p>
             <!-- <p>{{$store.state.inputName.username}}</p> -->
-            <p class="tele" @click="denglu()" v-show="nameshow">{{this.$store.state.inputName.username||nameing}}</p>
+            <p class="tele" @click="denglu()" v-show="nameshow">{{this.$store.state.useName||nameing}}</p>
             <!-- <p class="tele">{{nameing}}</p> -->
-            <p id="user_tele" class="el-icon-mobile-phone"></p>
+            <p id="user_tele">
+                <img src="../../src/components/imgs/telephone.png" alt="">
+            </p>
             <span id="user_word">暂无绑定手机号</span>
             <p><router-link to="/account">
                 <img id="img_right" src="../../src/components/imgs/jright.png" alt="">
@@ -40,27 +42,27 @@
         </div>
         <div id="user_three">
            <div @click="order()" id="user_order">
-                    <p class="el-icon-tickets"></p>
+                    <span class="icon1"><van-icon color="grey" size="32px" name="orders-o" /></span>
                     <span>我的订单</span>
                     <img src="../../src/components/imgs/youj.png" alt="">
             </div>
             <div @click="shop()" id="user_shop">
-                <p class="el-icon-shopping-bag-1"></p>
+                <p class="icon2"><van-icon color="orangered" size="34px" name="bag-o" /></p>
                 <span>积分商城</span>
                 <img src="../../src/components/imgs/youj.png" alt="">
             </div>
             <div @click="elecard()" id="user_card">
-                <p class="el-icon-bank-card"></p>
+                <span class="icon3"><van-icon color="gold" size="32px" name="vip-card-o" /></span>
                 <span>饿了吗会员卡</span>
                 <img src="../../src/components/imgs/youj.png" alt="">
             </div>
             <div @click="service()" id="user_fuwu">
-                <p class="el-icon-service"></p>
+                <span class="icon4"><van-icon color="rgb(20, 248, 96)" size="32px" name="service" /></span>
                 <span>服务中心</span>
                 <img src="../../src/components/imgs/youj.png" alt="">
             </div>
             <div @click="xiazai()" id="user_app">
-                <p class="el-icon-platform-eleme"></p>
+                <span class="icon5"><img src="../../src/components/imgs/elema.png" alt=""></span>
                 <span>下载饿了么APP</span>
                 <img src="../../src/components/imgs/youj.png" alt="">
             </div>
@@ -91,6 +93,11 @@
     </div>
 </template>
 <script>
+import Vue from 'vue'
+
+import Icon from 'vant/lib/icon';
+import 'vant/lib/icon/style';
+// Vue.use(Icon);
 export default {
     name:'common',
     data(){
@@ -220,6 +227,7 @@ export default {
 }
 </script>
 <style scoped>
+
 /* #common{
     border: 1px solid red
 } */
@@ -351,8 +359,13 @@ margin-left: 0.23rem;
     color: white;
     font-size: 0.22rem;
     position: absolute;
-    top: 0.53rem;
-    left: 0.92rem;
+    top: 0.5rem;
+    left: 0.9rem;
+}
+#user_tele img{
+    width: 0.28rem;
+    height: 0.25rem;
+
 }
 #user_word{
     /* border: 1px solid red; */
@@ -459,15 +472,20 @@ margin-left: 0.23rem;
     /* border: 1px solid red; */
     background-color: #fff;
     height: 0.5rem;
+    padding-left: 0.14rem;
+    border-bottom: 0.5px solid lightgray;
+    border-top: 0.5px solid lightgray;
 }
-.el-icon-tickets{
-    font-size: 0.3rem;
-    color: rgb(129, 129, 129);
-    line-height: 0.5rem;
-    margin-left: 0.15rem;
+.icon1{
+    display: inline-block;
+    margin-top: 0.09rem;
 }
-#user_order span{
+#user_order span:nth-child(2){
+    display: inline-block;
     font-size: 0.21rem;
+    position: absolute;
+    top: 0.16rem;
+    left: 0.5rem;
 }
 #user_order img{
     position: absolute;
@@ -478,15 +496,19 @@ margin-left: 0.23rem;
     /* border: 1px solid red; */
     background-color: #fff;
     height: 0.5rem;
+    padding-left: 0.13rem;
+    border-bottom: 0.5px solid lightgray;
 }
-.el-icon-shopping-bag-1{
-    font-size: 0.3rem;
-    color: orangered;
-    line-height: 0.5rem;
-    margin-left: 0.15rem;
+.icon2{
+    display: inline-block;
+    margin-top: 0.06rem;
+
 }
-#user_shop span{
+#user_shop span:nth-child(2){
     font-size: 0.21rem;
+    position: absolute;
+    top: 0.68rem;
+    left: 0.5rem;
 }
 #user_shop img{
     position: absolute;
@@ -496,20 +518,23 @@ margin-left: 0.23rem;
 #user_card{
     /* border: 1px solid red; */
     background-color: #fff;
-    height: 0.5rem;
+    height: 0.48rem;
+    padding-left: 0.13rem;
+    border-bottom: 0.5px solid lightgray;
 }
-.el-icon-bank-card{
-    font-size: 0.3rem;
-    color: gold;
-    line-height: 0.5rem;
-    margin-left: 0.15rem;
+.icon3{
+    display: inline-block;
+    margin-top: 0.07rem;
 }
-#user_card span{
+#user_card span:nth-child(2){
     font-size: 0.21rem;
+    position: absolute;
+    top: 1.15rem;
+    left: 0.5rem;
 }
 #user_card img{
     position: absolute;
-    top: 1.2rem;
+    top: 1.15rem;
     right: 0.2rem;
 }
 #user_fuwu{
@@ -517,15 +542,19 @@ margin-left: 0.23rem;
     margin-top: 0.15rem;
     background-color: #fff;
     height: 0.5rem;
+    padding-left: 0.13rem;
+    border-bottom: 0.5px solid lightgray;
+    border-top: 0.5px solid lightgray;
 }
-.el-icon-service{
-    font-size: 0.3rem;
-    color: rgb(20, 248, 96);
-    line-height: 0.5rem;
-    margin-left: 0.15rem;
+.icon4{
+    margin-top: 0.1rem;
+    display: inline-block;
 }
-#user_fuwu span{
+#user_fuwu span:nth-child(2){
     font-size: 0.21rem;
+    position: absolute;
+    top: 1.8rem;
+    left: 0.5rem;
 }
 #user_fuwu img{
     position: absolute;
@@ -536,19 +565,28 @@ margin-left: 0.23rem;
     /* border: 1px solid red; */
     background-color: #fff;
     height: 0.5rem;
+    border-bottom: 0.5px solid lightgray;
 }
-.el-icon-platform-eleme{
-    font-size: 0.3rem;
-    color: blue;
-    line-height: 0.5rem;
-    margin-left: 0.15rem;
+.icon5 img{
+    /* border: 1px solid red; */
+    width: 0.3rem;
+    height: 0.3rem;
+    display: block;
+    position: absolute;
+    top: 0rem;
+    left: 0.13rem;
+    margin-bottom: 0.05rem;
 }
-#user_app span{
+#user_app span:nth-child(2){
     font-size: 0.21rem;
+    position: absolute;
+    top: 2.3rem;
+    left: 0.5rem;
 }
 #user_app img{
     position: absolute;
     top: 2.3rem;
     right: 0.2rem;
 }
+
 </style>
