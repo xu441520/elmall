@@ -148,7 +148,7 @@ export default {
     color: rgb(116, 116, 116); 
 }
 #sou_one ul{
-    margin-top: 1rem;
+    margin-top: 0.7rem;
 }
 #sou_one ul li{
     border-top: 0.5px solid lightgray;
