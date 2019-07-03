@@ -10,17 +10,11 @@ export default {
       state.count -= n;
     },
     getGeohash(state,v){
-<<<<<<< HEAD
          state.geohash = v;
     },
     getName(state,v){
         state. getName = v;
     },
-=======
-      state.geohash = v;
-    }
-    ,
->>>>>>> 189e59ca82344e87451f74e0f5d90bac48ef18b9
     getshopId(state,v1){
       state.id = v1;
     },
