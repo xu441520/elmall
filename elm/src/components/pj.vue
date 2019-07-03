@@ -266,7 +266,7 @@ export default {
    #pingfen{
   font-size: 0.12rem;
   position: absolute;
-  top: 0;
+  top: 0.1rem;
   left: 0.75rem;
   color: orange;
 }
