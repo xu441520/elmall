@@ -21,7 +21,7 @@
     </div>
     <div id="location_two">
       <ul id="ul1">
-        <li :key="i" v-for="(v,i) in datas" @click="getGeohash(v.geohash);getdizhiname(v.name)">
+        <li  :key="i" v-for="(v,i) in datas" @click="getGeohash(v.geohash);getdizhiname(v.name);chuanzhi(i)">
           <router-link to="/home" id="na">{{v.name}}</router-link>
           <br>
           <span id="dre">{{v.address}}</span>
@@ -36,6 +36,7 @@ export default {
     this.Id = this.$route.query.cityID;
     this.Name = this.$route.query.cityName;
     this.add();
+    this.diZi();
   },
   data() {
     return {
@@ -79,6 +80,10 @@ export default {
         console.log("成功");
         this.datas = response.data;
         console.log(response.data); //返回请求到的数据
+        this.datas = response.data;
+        console.log("打印定位成功2");
+        console.log(this.$route.query.cityID);
+        this.$store.commit("ciryid",this.$route.query.cityID);
       });
       if (localStorage.history) {
         if (localStorage.history.indexOf(this.value) == -1) {
@@ -88,6 +93,12 @@ export default {
         localStorage.history = this.value;
       }
       this.add();
+    },
+     // 传经纬度部分
+    chuanzhi(i){
+        this.$store.commit("allcitydatas",this.datas[i].geohash);
+        console.log("点击传值");
+        console.log(this.datas[i].geohash);
     },
     add() {
       if (!localStorage.history) {
