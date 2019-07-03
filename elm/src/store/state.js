@@ -3,6 +3,7 @@
     id:"",//店铺ID
     score2:"",//综合评分,
     dizhiname:"",
+    bool:true,
     //贺子涵
     danjia:0,
     dian:0,

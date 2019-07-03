@@ -32,10 +32,10 @@
       </div>
       <div id="toogle">
         <router-link :to="'/sp?id='+Detil.id">
-          <span :class="{red: !isshow,blue: isshow}" @click="isshow=!isshow" id="sp1">商品</span>
+          <span :class="{red: !isshow,blue: isshow}" @click="pdd2()" id="sp1">商品</span>
         </router-link>
         <router-link :to="'/pj?id='+Detil.id">
-          <span :class="{blue: !isshow,red: isshow}" @click="isshow=!isshow" id="sp2">评价</span>
+          <span :class="{blue: !isshow,red: isshow}" @click="pdd()" id="sp2">评价</span>
         </router-link>
       </div>
     </div>
@@ -44,7 +44,7 @@
       <router-view></router-view>
     </div>
 
-    <div id="store_bottom">
+    <div id="store_bottom" v-if="$store.state.bool">
       <div v-if="$store.state.danjia == 0 || $store.state.dian==0" id="gwc1">
         <img src="./imgs/car.png" alt />
       </div>
@@ -110,6 +110,17 @@ export default {
     this.detil();
   },
   methods: {
+    pdd(){
+      this.isshow=!this.isshow;
+      this.$store.commit("getBool2",false);
+      console.log("hello");
+      console.log(this.$store.state.bool);
+    },
+     pdd2(){
+      this.isshow=!this.isshow;
+      this.$store.commit("getBool1",true);
+      console.log(this.$store.state.bool);
+    },
     chuan() {
       this.$store.state.sul++;
     },

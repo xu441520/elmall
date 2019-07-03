@@ -25,6 +25,12 @@ export default {
     getdizhiname(state,v){
         state.dizhiname = v;
     },
+    getBool1(state,v){
+        state.bool = v;
+    },
+    getBool2(state,v){
+        state.bool = v;
+    },
     //贺子涵
     getdanjia(state,a){
         state.danjia += a;
