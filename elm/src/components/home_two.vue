@@ -238,7 +238,7 @@ text-align: center;
 
 .el-input__inner {
 float: left;
-width: 1.2rem;
+width: 33vw;
 /* margin: 0 auto; */
 border: none;
 border-radius: 0%;
@@ -305,7 +305,7 @@ border-radius: 15%;
 line-height: 0.18rem;
 font-weight: bold;
 position: absolute;
-margin-top: 0.2rem;
+margin-top: 0.22rem;
 }
 #star_one_right {
 /* border: 0.01rem solid black; */
@@ -315,7 +315,7 @@ text-align: center;
   line-height: 0.18rem;
   font-size: 0.12rem;
   position: absolute;
-  margin-top: 0.2rem;
+  margin-top: 0.22rem;
   margin-left: 0.9rem;
 }
 #common_head {
@@ -402,8 +402,8 @@ margin-right: 0.12rem;
 margin-top: 0.1rem;
 border: 0.01rem solid blue;
 position: absolute;
-top: 0.2rem;
-right: 0.02rem;
+top: 0.32rem;
+right: 0.55rem;
 font-size: 0.12rem;
 color: white;
 background-color: blue;
@@ -415,7 +415,7 @@ height: 0.18rem; */
 #zhunshi {
 /* margin-top: 0.2rem; */
 position: absolute;
-top: 0.4rem;
+top: 0.3rem;
 margin-top: 0.12rem;
 right: 0.02rem;
 border: 0.01rem solid blue;
@@ -438,8 +438,8 @@ color: gray;
 /* border: 0.01rem solid black; */
 position: absolute;
 right: 0.1rem;
-top: 0.7rem;
-margin-top: 0.15rem;
+top: 0.65rem;
+margin-top: 0.12rem;
 font-size: 0.12rem;
 }
 #star_three_one {
@@ -534,5 +534,6 @@ font-size: 0.15rem;
   position: absolute;
   top: 0;
   left: 0.7rem;
+  color: orange;
 }
 </style>

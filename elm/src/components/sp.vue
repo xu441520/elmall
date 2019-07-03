@@ -185,7 +185,7 @@ export default {
   top: 1.3rem;
 }
 #sp_ri_div {
-  width: 2.89rem;
+  width: 2.94rem;
   /* border: 0.01rem solid black; */
   overflow: hidden;
   /* position: fixed;
@@ -301,7 +301,7 @@ export default {
   width: 0.2rem;
   height: 0.2rem;
   text-align: center;
-  line-height: 0.16rem;
+  line-height: 0.15rem;
 }
 .xinb {
   width: 0;
@@ -338,7 +338,7 @@ export default {
   width: 0.18rem;
   height: 0.18rem;
   text-align: center;
-  line-height: 0.14rem;
+  line-height: 0.12rem;
   font-size: 0.3rem;
   color: blue;
 }
