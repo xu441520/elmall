@@ -145,7 +145,7 @@ export default {
          height: 0.5rem;
          line-height: 0.5rem;
          background-color: #fff;
-         border-bottom: 0.5px solid rgb(204, 204, 204);
+         border-bottom: 0.01rem solid rgb(204, 204, 204);
      }
      #login_three input{
          margin-left: 0.12rem;
@@ -155,7 +155,7 @@ export default {
          height: 0.5rem;
          /* line-height: 0.5rem; */
          background-color: #fff;
-         border-bottom: 0.5px solid rgb(204, 204, 204);
+         border-bottom: 0.01rem solid rgb(204, 204, 204);
          position: relative;
      }
      #login_four input{
@@ -193,14 +193,16 @@ export default {
          
          background-color: green;
          text-align: center;
-         height: 0.5rem;
+         height: 0.55rem;
          line-height: 0.5rem;
-         font-size: 0.03rem; 
+         font-size: 0.15rem; 
      }
      #login_six button{
+         height: 0.12rem;
          background-color: green;
          color: white;
          border: none;
+         margin:0.01rem;
      }
      #login_seven{
         height: 0.5rem;
@@ -209,7 +211,7 @@ export default {
      }
      #reset{
          color: #3091e9;
-         font-size: 0.12rem;
+         font-size: 0.15rem;
          position: absolute;
          right:0%;
      }

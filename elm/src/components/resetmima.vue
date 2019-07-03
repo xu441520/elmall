@@ -126,7 +126,7 @@ export default {
          height: 0.5rem;
          line-height: 0.5rem;
          background-color: #fff;
-         border-bottom: 0.5px solid rgb(204, 204, 204);
+         border-bottom: 0.01rem  solid rgb(204, 204, 204);
      }
      #resetmima_two input{
          margin-left: 0.12rem;
@@ -136,7 +136,7 @@ export default {
          height: 0.5rem;
          line-height: 0.5rem;
          background-color: #fff;
-         border-bottom: 0.5px solid rgb(204, 204, 204);
+         border-bottom: 0.01rem solid rgb(204, 204, 204);
      }
      #resetmima_three input{
          margin-left: 0.12rem;
@@ -146,7 +146,7 @@ export default {
          height: 0.5rem;
          line-height: 0.5rem;
          background-color: #fff;
-         border-bottom: 0.5px solid rgb(204, 204, 204);
+         border-bottom: 0.01rem solid rgb(204, 204, 204);
      }
      #resetmima_four input{
          margin-left: 0.12rem;
@@ -156,20 +156,20 @@ export default {
          height: 0.5rem;
          line-height: 0.5rem;
          background-color: #fff;
-         border-bottom: 0.5px solid rgb(204, 204, 204);
+         border-bottom: 0.01rem solid rgb(204, 204, 204);
          position: relative;
      }
      #resetmima_five input{
-         margin-left: 0.12rem;
+         margin-left: 0.1rem;
          position: absolute;
-         top: 0.12rem;
+         top: 0rem;
      }
       #resetmima_six{
         font-size: 0.12rem;
          height: 0.5rem;
          /* line-height: 0.5rem; */
          background-color: #fff;
-         border-bottom: 0.5px solid rgb(204, 204, 204);
+         border-bottom: 0.01rem solid rgb(204, 204, 204);
          position: relative;
      }
      #resetmima_six input{
@@ -196,7 +196,7 @@ export default {
      #resetmima_seven{
          background-color: green;
          text-align: center;
-         height: 0.5rem;
+         height: 0.6rem;
          line-height: 0.5rem;
          font-size: 0.03rem; 
          border-radius:0.05rem; 
@@ -206,6 +206,7 @@ export default {
          background-color: green;
          color: white;
          border: none;
+         margin-top: 0rem;
      }
     
     
