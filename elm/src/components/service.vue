@@ -13,7 +13,9 @@
                 </div>
                 <div id="linge"></div>
                 <div>
-                    <img src="../../src/components/imgs/dianhua.png" alt="">
+                    <a href="tel:119">
+                        <img src="../../src/components/imgs/dianhua.png" alt="">    
+                    </a>
                     <p>在线客服</p>
                 </div>
             </div>

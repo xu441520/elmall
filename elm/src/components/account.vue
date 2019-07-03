@@ -127,7 +127,6 @@ export default {
                 url:api,
                 method:'get',
                 withCredentials:true
-
             }).then(res => {//请求返回的数据res
                 console.log("打印头像成功");
                 console.log(res);
@@ -143,13 +142,11 @@ export default {
             this.$http({
                 url:api,
                 method:'post',
-                data:{//post的请求参数
-                   
+                data:{//post的请求参数  
                 }
             }).then(res => {//请求返回的数据res
                 console.log("返回头像成功");
                 console.log(res);
-                
             })
         },
 
