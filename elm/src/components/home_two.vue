@@ -26,6 +26,7 @@ v-model="value"
 </template>
 </el-cascader>
 <button @click="dian()" id="anniu">筛选</button>
+</div>
 <div class="class_3" v-if="xs2">
 <p style="color:gray">配送方式</p>
 <div class="peisong">
@@ -64,7 +65,6 @@ v-model="value"
 确定
 <span v-text="btn_cf"></span>
 </el-button>
-</div>
 </div>
 </div>
 </div>
@@ -247,7 +247,7 @@ border-radius: 0%;
 height: 0.32rem;
 margin-top: 0.07rem;
 text-align: center;
-border: 0.01rem solid rgb(197, 195, 195);
+border-right: 0.01rem solid rgb(197, 195, 195);
 background-color: rgba(0, 0, 0, 0);
 color: black;
 }
@@ -480,8 +480,9 @@ position: relative;
 margin-top: 0.2rem;
 padding: 0.05rem;
 width: 0.9rem;
-border: 0.01rem solid grey;
+/* border: 0.01rem solid grey; */
 border-radius: 0.05rem;
+font-size: 0.14rem
 }
 .shuxing1 {
 position: absolute;
