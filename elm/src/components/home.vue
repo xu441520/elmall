@@ -439,8 +439,8 @@ export default {
   margin-top: 0.1rem;
   border: 0.01rem solid blue;
   position: absolute;
-  top: 0.2rem;
-  right: 0.02rem;
+  top: 0.32rem;
+  right: 0.55rem;
   font-size: 0.12rem;
   color: white;
   background-color: blue;
@@ -451,7 +451,7 @@ export default {
 #zhunshi {
   /* margin-top: 0.2rem; */
   position: absolute;
-  top: 0.4rem;
+  top: 0.3rem;
   margin-top: 0.12rem;
   right: 0.02rem;
   border: 0.01rem solid blue;
@@ -489,5 +489,6 @@ export default {
   position: absolute;
   top: 0;
   left: 0.7rem;
+  color: orange;
 }
 </style>

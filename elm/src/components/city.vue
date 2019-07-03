@@ -20,15 +20,15 @@
         <div id="city_hot">
           <div>热门城市</div>
           <ul>
-            <li :key="i" v-for="(v,i) in datas"><router-link :to="'/location?cityID='+v.id+'&cityName='+v.name">{{v.name}}</router-link></li>
+            <li :key="i" v-for="(v,i) in datas"><router-link id="rmcs" :to="'/location?cityID='+v.id+'&cityName='+v.name">{{v.name}}</router-link></li>
           </ul>
         </div>
           <div id="city_all">
         <ul>
           <li :key="key" v-for="(value,key) in allCity">
-            <h4 id="paiX">{{key}}（按字母排序）</h4>
+            <h4 id="paiX">{{key}}（按字母排序）</h4>  
             <span :key="i" v-for="(v,i) in value" id="city">
-                 <router-link :to="'/location?cityID='+v.id+'&cityName='+v.name">
+                 <router-link :to="'/location?cityID='+v.id+'&cityName='+v.name" id="csm">
               {{v.name
               }}</router-link>
             </span>
@@ -223,23 +223,33 @@ body {
   margin-top: 1.2rem;
   background-color: #fff;
   overflow: hidden;
+  /* border: 0.01rem solid black */
 }
 #city {
   display: inline-block;
   width: 0.915rem;
   height: 0.4rem;
+  color: black;
   text-align: center;
-  border: 0.01rem solid #9b9b9b;
+  border: 0.01rem solid #dddcdc;
   line-height: 0.4rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   vertical-align: top;
+
 }
 #paiX {
   height: 0.4rem;
   line-height: 0.4rem;
   /* overflow: hidden; */
+  /* color:black; */
+}
+#csm{
+  color: black;
+}
+#rmcs{
+  color: blue;
 }
 </style>
 

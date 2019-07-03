@@ -47,7 +47,9 @@ export default {
     },
      methods:{
         xiugaiBack(){
-            this.$router.go(-1);
+            this.$router.push({
+        name: "account"
+      });
         },
         // 显示完成和编辑的地方
         showing(){
