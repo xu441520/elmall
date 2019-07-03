@@ -20,6 +20,9 @@ export default {
       state.score2 = v1;
     }
     ,
+    getdizhiname(state,v){
+        state.dizhiname = v;
+    },
     //贺子涵
     getdanjia(state,a){
         state.danjia += a;

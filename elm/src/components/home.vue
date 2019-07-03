@@ -16,7 +16,7 @@
         <!-- <img src="./imgs/fangdajing.png" id="'search?'"> -->
 
         <!-- 修改地址id -->
-        <span id="add">{{geohash}}</span>
+        <span id="add">{{dizhiname}}</span>
         <!-- 跳转到我的 -->
         <router-link to="/user">
           <img src="./imgs/reload.png" id="my" />
@@ -138,12 +138,15 @@ export default {
   created() {
     this.fenlei2();
     this.geohash = this.$store.state.geohash;
+    this.dizhiname = this.$store.state.dizhiname;
     console.log(this.Name);
     this.List();
     this.data1 = this.$route.query; //从location页传过来名字和经纬度
     console.log("经纬度为:" + this.data1.geohash); //打印名字和经纬度
     console.log("jingweidu:" + this.$store.state.geohash);
+    console.log("dizhiming:"+this.$store.state.dizhiname);
     this.score2 = this.$store.state.score2;
+    
   },
   methods: {
     // getName(v1){

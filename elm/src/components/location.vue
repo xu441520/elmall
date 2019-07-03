@@ -21,7 +21,7 @@
     </div>
     <div id="location_two">
       <ul id="ul1">
-        <li :key="i" v-for="(v,i) in datas" @click="getGeohash(v.name)">
+        <li :key="i" v-for="(v,i) in datas" @click="getGeohash(v.geohash);getdizhiname(v.name)">
           <router-link to="/home" id="na">{{v.name}}</router-link>
           <br>
           <!-- 将名字和经纬度传给home -->
@@ -47,13 +47,17 @@ export default {
       datas: [], //搜索地址接口返回的数组类型数据
       value: "",
       geohash: "",
-      history: []
+      history: [],
+      dizhiname:""
     };
   },
   methods: {
     getGeohash(v){
       this.$store.commit("getGeohash",v)
             console.log("jingweidu1:"+this.$store.state.geohash)
+    },
+    getdizhiname(v){
+      this.$store.commit("getdizhiname",v)
     },
     loBack() {
       javascript: history.go(-1);

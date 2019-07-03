@@ -1,7 +1,8 @@
  export default {
     geohash:"",//经纬度
     id:"",//店铺ID
-    score2:"",//综合评分
+    score2:"",//综合评分,
+    dizhiname:"",
     //贺子涵
     danjia:0,
     dian:0,
