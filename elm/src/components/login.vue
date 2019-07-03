@@ -8,8 +8,10 @@
         <div id="login_two">
             <input v-model="username" type="text" placeholder="账号"><br>
         </div>
-        <div id="login_three">
-             <input v-model="password" type="text" placeholder="密码"><br>
+        <div id="login_three" @click="display()">
+             <input v-model="password" type="text" placeholder="密码" :type="show">
+             <el-switch v-model="value" active-color="#13ce66" inactive-color="rgb(204,204,204)"></el-switch>
+             <br>
         </div>
         <div id="login_four">
             <!-- <input v-model="codeNumber" type="text" placeholder="验证码">
@@ -42,6 +44,8 @@ export default {
     name:"login",
     data(){
         return{
+            value:false,
+            show:"password",
             code:"",//存储验证码base64图片
             username:"",
             password:"",
@@ -53,6 +57,14 @@ export default {
         this.getCode();
     },
     methods:{
+        display() {
+      if (this.value == false) {
+        this.show = "password";
+      } else {
+        this.show = "text";
+      }
+    }
+        ,
         ret(){
             this.$router.go(-1);
         },
@@ -146,9 +158,14 @@ export default {
          line-height: 0.5rem;
          background-color: #fff;
          border-bottom: 0.01rem solid rgb(204, 204, 204);
+         position: relative;
      }
      #login_three input{
          margin-left: 0.12rem;
+     }
+     .el-switch__core{
+         position: absolute;
+        left: 1.8rem;
      }
       #login_four{
         font-size: 0.12rem;
@@ -215,5 +232,4 @@ export default {
          position: absolute;
          right:0%;
      }
-    
 </style>

@@ -8,14 +8,18 @@
         <div id="resetmima_two">
             <input v-model="username" type="text" placeholder="账号"><br>
         </div>
-        <div id="resetmima_three">
-             <input v-model="oldpassWord" type="text" placeholder="旧密码"><br>
+        <div id="resetmima_three" @click="display()"> 
+             <input v-model="oldpassWord" type="text" placeholder="旧密码" :type="show">
+             <el-switch v-model="value" active-color="#13ce66" inactive-color="rgb(204,204,204)"></el-switch>
+             <br>
         </div>
         <div id="resetmima_four">
-             <input v-model="newpassword" type="text" placeholder="请输入新密码"><br>
+             <input v-model="newpassword" type="text" placeholder="请输入新密码">
+             <br>
         </div>
         <div id="resetmima_five">
-             <input v-model="confirmpassword" type="text" placeholder="请确认密码"><br>
+             <input v-model="confirmpassword" type="text" placeholder="请确认密码">
+             <br>
         </div>
         <div id="resetmima_six">
             <input v-model="captcha_code" type="text" placeholder="验证码">
@@ -37,6 +41,8 @@ export default {
     name:"login",
     data(){
         return{
+            value:false,
+            show:"password",
             code:"",//存储验证码base64图片
             username:"",//存储用户名
             oldpassWord:"",//存储旧密码
@@ -50,6 +56,14 @@ export default {
         this.getCode();
     },
     methods:{
+         display() {
+      if (this.value == false) {
+        this.show = "password";
+      } else {
+        this.show = "text";
+      }
+    }
+        ,
         ret(){
             this.$router.go(-1);
         },
@@ -209,5 +223,8 @@ export default {
          margin-top: 0rem;
      }
     
-    
+    .el-switch__core{
+         position: absolute;
+        left: 1.8rem;
+     }
 </style>
