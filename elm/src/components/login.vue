@@ -92,6 +92,8 @@ export default {
                     this.$store.commit("getInp",res.data);
                     // 只发送用户名部分
                     this.$store.commit("getname",res.data.username);
+                    // 发送红包数量
+                    this.$store.commit("giftamount",3);
                     console.log("打印公用数据名部分"+res.data.username);
                     //登录成功，跳转到首页，编程式路由跳转，传值query或者params传值
                     //登录成功，跳转到首页，编程氏路由跳转，传值query或者params传值
