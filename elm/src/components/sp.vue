@@ -60,9 +60,10 @@
             <!-- <span >选规格</span> -->
             <span
               id="xuan_gui"
-              @click="value.__v++; Jia(value.specfoods[0].price); v.type++;
+              @click="value.__v++; Jia(value.specfoods[0].price,index,$event); v.type++;
             Gwc(value);chuan(v.type-1)"
             >+</span>
+            <div class="ball"></div>
           </div>
           <div id="ling" v-if="value.__v>0">
             <span>{{value.__v}}</span>
@@ -73,7 +74,9 @@
             @click="value.__v--; Jian(value.specfoods[0].price);v.type--; Gwc(value);chuan(v.type-1)"
           >
             <span>-</span>
+            
           </div>
+          <div class="ball"></div>
         </div>
       </div>
     </div>
@@ -122,9 +125,21 @@ export default {
         console.log(res.data);
       });
     },
-    Jia(a) {
+    Jia(a,b,evt) {
       this.$store.commit("getdanjia", a);
       // console.log(this.$store.state.danjia);
+      var jiahaoObj = document.getElementsByClassName("xuan2");
+      var $ball = document.getElementsByClassName("ball");
+      // document.body.onclick = function(evt) {
+      // console.log(evt.pageX, evt.pageY);
+      $ball[b].style.top = evt.pageY + "px";
+      $ball[b].style.left = evt.pageX + "px";
+      $ball[b].style.transition = "left 0s, top 0s";
+      setTimeout(() => {
+      $ball[b].style.top = window.innerHeight + "px";
+      $ball[b].style.left = "0px";
+      $ball[b].style.transition = "left 1s linear, top 1s ease-in";
+      }, 20);
     },
     Jian(b) {
       this.$store.commit("datadanjia", b);
@@ -141,6 +156,17 @@ export default {
 };
 </script>
 <style scoped>
+.ball {
+width: 12px;
+height: 12px;
+background: blue;
+border-radius: 50%;
+position: fixed;
+transition: left 1s linear, top 1s ease-in;
+z-index: 10;
+left: -1rem;
+top:0;
+}
 #sp {
   overflow: hidden;
   /* position: relative;

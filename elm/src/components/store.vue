@@ -57,7 +57,7 @@
         <p>{{Detil.piecewise_agent_fee.tips}}</p>
       </div>
       <p v-if="$store.state.danjia == 0" id="qisong">还差￥{{Detil.float_minimum_order_amount}}起送</p>
-      <p v-if="$store.state.danjia >0" id="qujiesuan">却结算</p>
+      <p v-if="$store.state.danjia >0" id="qujiesuan">去结算</p>
     </div>
     <div id="Gwc" v-if="diang==true &&$store.state.danjia >0 &&$store.state.dian>0">
       <div id="Gwcb">
