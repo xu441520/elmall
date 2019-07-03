@@ -10,9 +10,11 @@ export default {
       state.count -= n;
     },
     getGeohash(state,v){
-      state.geohash = v;
-    }
-    ,
+         state.geohash = v;
+    },
+    getName(state,v){
+        state. getName = v;
+    },
     getshopId(state,v1){
       state.id = v1;
     },

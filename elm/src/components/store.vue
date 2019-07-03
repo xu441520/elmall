@@ -3,7 +3,11 @@
   <div id="store">
     <div id="store_head">
       <div id="store_head_one">
+<<<<<<< HEAD
+        <img id="beijing" :src="'https://elm.cangdu.org/img/'+Detil.image_path" alt="">
+=======
         <img :src="'https://elm.cangdu.org/img/'+Detil.image_path" id="beijing">
+>>>>>>> 189e59ca82344e87451f74e0f5d90bac48ef18b9
         <p>
           <img :src="'https://elm.cangdu.org/img/'+Detil.image_path"/>
         </p>
@@ -85,7 +89,7 @@
             <span id="sul">{{value.__v}}</span>
             <span
               id="Jia"
-              @click="value.__v++;$store.state.dian++;$store.state.danjia+=value.specfoods[0].pricex;"
+              @click="value.__v++;$store.state.dian++;$store.state.danjia+=value.specfoods[0].price;"
             >+</span>
           </li>
         </ul>

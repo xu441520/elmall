@@ -8,7 +8,7 @@
     dian:0,
     name:[],
     sul:'',
-
+    getName:'',
     //我的部分
     // 共享用户名部分,
     inputName:'',

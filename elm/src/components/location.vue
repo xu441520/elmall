@@ -24,8 +24,7 @@
         <li :key="i" v-for="(v,i) in datas" @click="getGeohash(v.geohash);getdizhiname(v.name)">
           <router-link to="/home" id="na">{{v.name}}</router-link>
           <br>
-          <!-- 将名字和经纬度传给home -->
-          <router-link :to="'/home?cityname='+v.name+'&geohash='+v.geohash" id="dre">{{v.address}}</router-link>
+          <span id="dre">{{v.address}}</span>
         </li>
       </ul>
       <!-- <span>搜索历史</span> -->
@@ -53,8 +52,13 @@ export default {
   },
   methods: {
     getGeohash(v){
-      this.$store.commit("getGeohash",v)
-            console.log("jingweidu1:"+this.$store.state.geohash)
+      this.$store.commit("getGeohash",v);
+    },
+    getName(a){
+       this.$store.commit("getName",a)
+       this.$router.push({
+        name: "home"
+      });
     },
     getdizhiname(v){
       this.$store.commit("getdizhiname",v)

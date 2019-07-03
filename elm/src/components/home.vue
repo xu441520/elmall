@@ -132,7 +132,7 @@ export default {
         loop: true
       }
     };
-    data1: "";
+    // data1: "";
   },
   computed: {},
   created() {
@@ -156,7 +156,7 @@ export default {
     getshopId(v) {
       this.$store.commit("getshopId", v);
       console.log(v);
-      this.$router.push({ name: "store" });
+      this.$router.push({ name: "store"});
     },
     getscore2(v){
         this.$store.commit("getscore2",v);
