@@ -32,7 +32,7 @@
         </div>
         <div @click="tele()" id="account_five">
             <div id="five_tele">
-                <i class="el-icon-mobile-phone"></i> 
+                <img id="five_timg" src="../../src/components/imgs/phoneing.png" alt=""> 
             </div>
             <span id="account_tele">手机</span>
             <img id="tele_img" src="../../src/components/imgs/youj.png" alt="">
@@ -380,6 +380,10 @@ export default {
     width: 0.3rem;
     text-align: center;
     border-radius: 15%;
+}
+#five_timg{
+    width: 0.22rem;
+    height: 0.2rem;
 }
 .el-icon-mobile-phone{
     font-size: 0.25rem;
