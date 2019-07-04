@@ -166,7 +166,7 @@ export default {
      }
      .el-switch__core{
          position: absolute;
-        left: 1.8rem;
+        left: 1.2rem;
      }
       #login_four{
         font-size: 0.12rem;
