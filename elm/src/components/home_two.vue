@@ -240,12 +240,12 @@ justify-content: space-between;
 
 .el-input__inner {
 /* float: left; */
-width: 28vw;
+width: 25vw;
 /* margin: 0 auto; */
 border: none;
 border-radius: 0%;
 height: 0.32rem;
-margin-top: 0.07rem;
+margin-top: 0.06rem;
 text-align: center;
 border-right: 0.01rem solid rgb(197, 195, 195);
 background-color: rgb(255, 255, 255);
@@ -523,10 +523,10 @@ z-index: 2;
 }
 #anniu{
 height: 0.35rem;
-width: 1.1rem;
+width: 1.14rem;
 /* float: right; */
-margin-top: 0.08rem;
-margin-right: 0.1rem;
+margin-top: 0.09rem;
+/* margin-right: 0.1rem; */
 background-color: rgb(255, 255, 255);
 border:none;
 border-right: 0.01rem solid rgb(121, 120, 120);
