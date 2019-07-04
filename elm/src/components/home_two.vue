@@ -455,9 +455,9 @@ width: 0.2rem;
 }
 #geshu {
 /* border: 0.01rem solid black; */
-background-color: rgb(173, 171, 171);
-font-size: 0.12rem;
-color: white;
+/* background-color: rgb(173, 171, 171); */
+/* font-size: 0.12rem; */
+color: rgb(173, 171, 171);
 border-top-left-radius: 0.06rem;
 border-top-right-radius: 0.06rem;
 border-bottom-right-radius: 0.06rem;
@@ -466,6 +466,7 @@ position: absolute;
 right: 0.22rem;
 top: 0.1rem;
 line-height: 0.15rem;
+border: 0.01rem solid rgb(173, 171, 171);
 }
 .class_3 {
 position: relative;
@@ -521,14 +522,14 @@ left: 0;
 z-index: 2;
 }
 #anniu{
-height: 0.31rem;
-width: 1rem;
+height: 0.35rem;
+width: 1.1rem;
 /* float: right; */
 margin-top: 0.08rem;
 margin-right: 0.1rem;
 background-color: rgb(255, 255, 255);
 border:none;
-/* border-right: 0.01rem solid rgb(121, 120, 120); */
+border-right: 0.01rem solid rgb(121, 120, 120);
 color: lightgrey;
 font-size: 0.15rem;
 }
