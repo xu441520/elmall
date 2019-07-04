@@ -31,6 +31,7 @@
         </router-link>
       </div>
       <div id="toogle">
+        
         <router-link :to="'/sp?id='+Detil.id">
           <span :class="{red: !isshow,blue: isshow}" @click="pdd2()" id="sp1">商品</span>
         </router-link>
